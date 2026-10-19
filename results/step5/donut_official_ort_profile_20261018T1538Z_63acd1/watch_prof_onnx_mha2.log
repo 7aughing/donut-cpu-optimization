@@ -1,0 +1,8 @@
+START prof_onnx_mha2 2026-10-18T15:38:28Z load 0.77 0.72 0.78
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+A cord_test_000.png {'total_ms': 5230.7, 'enc_run_ms': 4138.6, 'dec_p_run_ms': 864.6, 'loop_python_ms': 9.0} steps 53
+A cord_test_001.png {'total_ms': 5080.9, 'enc_run_ms': 4130.4, 'dec_p_run_ms': 741.4, 'loop_python_ms': 8.4} steps 50
+A cord_test_002.png {'total_ms': 5275.2, 'enc_run_ms': 4084.4, 'dec_p_run_ms': 959.5, 'loop_python_ms': 10.5} steps 60
+WATCHDOG_KILL anon=7738658816 2026-10-18T15:39:03Z
+<WORK_DIR>/donut_official_assets/scripts/donut_mem_watch.sh: line 26:  1657 Killed                  "$@"
+EXIT prof_onnx_mha2 rc=137 killed=1 peak_anon=7738658816 2026-10-18T15:39:04Z

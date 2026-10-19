@@ -1,0 +1,3 @@
+START fuse 2026-10-18T12:50:37Z load 0.68 0.58 0.50
+FUSED {'bytes': 710135751, 'elapsed_s': 10.67, 'maxrss_mib': 4114} stats {'EmbedLayerNormalization': 0, 'Attention': 0, 'MultiHeadAttention': 4, 'Gelu': 0, 'FastGelu': 0, 'BiasGelu': 4, 'GemmFastGelu': 0, 'LayerNormalization': 2, 'SimplifiedLayerNormalization': 0, 'SkipLayerNormalization': 12, 'SkipSimplifiedLayerNormalization': 0, 'RotaryEmbedding': 0, 'QOrderedAttention': 0, 'QOrderedGelu': 0, 'QOrderedLayerNormalization': 0, 'QOrderedMatMul': 0}
+EXIT fuse rc=0 killed=0 peak_anon=3958530048 2026-10-18T12:50:50Z

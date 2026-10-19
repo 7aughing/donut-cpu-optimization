@@ -1,0 +1,816 @@
+{
+  "backend": "onnx_mha2",
+  "images": [
+    "cord_test_000.png",
+    "cord_test_001.png",
+    "cord_test_002.png"
+  ],
+  "enc": {
+    "model_run_events": 4,
+    "kernel_events": 22176,
+    "skipped_warmup_runs": 1,
+    "measured_runs": 3,
+    "expected_measured_runs": 3,
+    "kernels_per_run_hist": {
+      "5544": 3
+    },
+    "full_runs": 3,
+    "complete": true,
+    "run_us_per_call": 4192201.6666666665,
+    "kernel_us_per_call": 4159200.6666666665,
+    "non_kernel_us_per_call": 33001.0,
+    "non_kernel_share": 0.007871997252040594,
+    "by_op": {
+      "MatMul": {
+        "us_per_call": 3108276.0,
+        "share_of_run": 0.7414423844908861
+      },
+      "Transpose": {
+        "us_per_call": 174818.33333333334,
+        "share_of_run": 0.04170084056865903
+      },
+      "BiasGelu": {
+        "us_per_call": 143283.0,
+        "share_of_run": 0.03417846072131549
+      },
+      "Add": {
+        "us_per_call": 142886.66666666666,
+        "share_of_run": 0.03408392010403444
+      },
+      "LayerNormalization": {
+        "us_per_call": 139743.0,
+        "share_of_run": 0.03333403569564282
+      },
+      "FusedMatMul": {
+        "us_per_call": 117651.33333333333,
+        "share_of_run": 0.02806433055661683
+      },
+      "Slice": {
+        "us_per_call": 96592.33333333333,
+        "share_of_run": 0.02304095580643584
+      },
+      "Softmax": {
+        "us_per_call": 86195.33333333333,
+        "share_of_run": 0.020560874735272357
+      },
+      "Concat": {
+        "us_per_call": 41631.666666666664,
+        "share_of_run": 0.009930740450224842
+      },
+      "Pad": {
+        "us_per_call": 39460.666666666664,
+        "share_of_run": 0.009412874142107508
+      },
+      "Where": {
+        "us_per_call": 36602.0,
+        "share_of_run": 0.008730973104426831
+      },
+      "Conv": {
+        "us_per_call": 5021.333333333333,
+        "share_of_run": 0.0011977795279409665
+      },
+      "ReorderOutput": {
+        "us_per_call": 3817.6666666666665,
+        "share_of_run": 0.0009106591166694033
+      },
+      "Not": {
+        "us_per_call": 3716.0,
+        "share_of_run": 0.0008864077388134556
+      },
+      "Sub": {
+        "us_per_call": 2999.6666666666665,
+        "share_of_run": 0.0007155349158218772
+      },
+      "Reshape": {
+        "us_per_call": 2997.6666666666665,
+        "share_of_run": 0.0007150578395361864
+      },
+      "Unsqueeze": {
+        "us_per_call": 2492.0,
+        "share_of_run": 0.0005944370519707028
+      },
+      "Gather": {
+        "us_per_call": 2175.3333333333335,
+        "share_of_run": 0.0005188999734029971
+      },
+      "ScatterND": {
+        "us_per_call": 1883.6666666666667,
+        "share_of_run": 0.00044932634840642605
+      },
+      "Expand": {
+        "us_per_call": 1850.6666666666667,
+        "share_of_run": 0.0004414545896925283
+      },
+      "Equal": {
+        "us_per_call": 1578.0,
+        "share_of_run": 0.00037641318941001965
+      },
+      "Shape": {
+        "us_per_call": 1326.3333333333333,
+        "share_of_run": 0.00031638109012726407
+      },
+      "Range": {
+        "us_per_call": 1245.6666666666667,
+        "share_of_run": 0.0002971390132710696
+      },
+      "Div": {
+        "us_per_call": 449.6666666666667,
+        "share_of_run": 0.00010726265156614205
+      },
+      "ConstantOfShape": {
+        "us_per_call": 402.0,
+        "share_of_run": 9.58923334238453e-05
+      },
+      "Mod": {
+        "us_per_call": 61.666666666666664,
+        "share_of_run": 1.4709852142132157e-05
+      },
+      "Mul": {
+        "us_per_call": 43.0,
+        "share_of_run": 1.0257140142351612e-05
+      }
+    },
+    "by_group": {
+      "compute_ops": {
+        "us_per_call": 3792489.0,
+        "share_of_run": 0.9046532828215563
+      },
+      "shape_ops": {
+        "us_per_call": 366711.6666666667,
+        "share_of_run": 0.08747471992640303
+      }
+    },
+    "by_stage": {
+      "layers.0": {
+        "us_per_call": 652576.0,
+        "share_of_run": 0.15566426710547082
+      },
+      "layers.1": {
+        "us_per_call": 471235.6666666667,
+        "share_of_run": 0.11240768076917419
+      },
+      "layers.2": {
+        "us_per_call": 2508172.3333333335,
+        "share_of_run": 0.5982947703295126
+      },
+      "layers.3": {
+        "us_per_call": 358174.6666666667,
+        "share_of_run": 0.08543831980093197
+      },
+      "other": {
+        "us_per_call": 169042.0,
+        "share_of_run": 0.040322964742869796
+      }
+    },
+    "top_nodes": [
+      {
+        "op": "MatMul",
+        "node": "/encoder/encoder/layers.N/blocks.N/output/dense/MatMul",
+        "us_per_call": 1017478.3333333334,
+        "share_of_run": 0.24270739201875227,
+        "out_shape": "[{\"float\": [1, 1200, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/encoder/encoder/layers.N/blocks.N/intermediate/dense/MatMul",
+        "us_per_call": 942738.0,
+        "share_of_run": 0.22487897170977383,
+        "out_shape": "[{\"float\": [1, 1200, 4096]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/encoder/encoder/layers.N/blocks.N/attention/self/query/MatMul",
+        "us_per_call": 244774.33333333334,
+        "share_of_run": 0.05838801488955088,
+        "out_shape": "[{\"float\": [12, 100, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/encoder/encoder/layers.N/blocks.N/attention/self/key/MatMul",
+        "us_per_call": 242664.0,
+        "share_of_run": 0.05788461989543283,
+        "out_shape": "[{\"float\": [12, 100, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/encoder/encoder/layers.N/blocks.N/attention/self/value/MatMul",
+        "us_per_call": 239569.0,
+        "share_of_run": 0.05714634434332636,
+        "out_shape": "[{\"float\": [12, 100, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/encoder/encoder/layers.N/blocks.N/attention/output/dense/MatMul",
+        "us_per_call": 230242.33333333334,
+        "share_of_run": 0.054921578597721725,
+        "out_shape": "[{\"float\": [12, 100, 1024]}]"
+      },
+      {
+        "op": "FusedMatMul",
+        "node": "/encoder/encoder/layers.N/blocks.N/attention/self/MatMul/MatMulScaleFusion/",
+        "us_per_call": 117651.33333333333,
+        "share_of_run": 0.02806433055661683,
+        "out_shape": "[{\"float\": [12, 32, 100, 100]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/encoder/encoder/layers.N/blocks.N/attention/self/MatMul_1",
+        "us_per_call": 114641.66666666667,
+        "share_of_run": 0.0273464102593665,
+        "out_shape": "[{\"float\": [12, 32, 100, 32]}]"
+      },
+      {
+        "op": "Transpose",
+        "node": "/encoder/encoder/layers.N/blocks.N/attention/self/Transpose_2",
+        "us_per_call": 99419.0,
+        "share_of_run": 0.023715223623545462,
+        "out_shape": "[{\"float\": [12, 32, 32, 100]}]"
+      },
+      {
+        "op": "Softmax",
+        "node": "/encoder/encoder/layers.N/blocks.N/attention/self/Softmax",
+        "us_per_call": 86195.33333333333,
+        "share_of_run": 0.020560874735272357,
+        "out_shape": "[{\"float\": [12, 32, 100, 100]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/encoder/encoder/layers.N/downsample/reduction/MatMul",
+        "us_per_call": 76168.33333333333,
+        "share_of_run": 0.018169052776961667,
+        "out_shape": "[{\"float\": [1, 1200, 1024]}]"
+      },
+      {
+        "op": "LayerNormalization",
+        "node": "/encoder/encoder/layers.N/blocks.N/layernorm_before/LayerNormalization",
+        "us_per_call": 58169.666666666664,
+        "share_of_run": 0.013875684256601841,
+        "out_shape": "[{\"float\": [1, 1200, 1024]}]"
+      },
+      {
+        "op": "LayerNormalization",
+        "node": "/encoder/encoder/layers.N/blocks.N/layernorm_after/LayerNormalization",
+        "us_per_call": 57343.666666666664,
+        "share_of_run": 0.013678651750611552,
+        "out_shape": "[{\"float\": [1, 1200, 1024]}]"
+      },
+      {
+        "op": "Pad",
+        "node": "/encoder/encoder/layers.N/blocks.N/Pad",
+        "us_per_call": 39460.666666666664,
+        "share_of_run": 0.009412874142107508,
+        "out_shape": "[{\"float\": [1, 40, 30, 1024]}]"
+      },
+      {
+        "op": "Add",
+        "node": "/encoder/encoder/layers.N/blocks.N/attention/self/Add",
+        "us_per_call": 38876.666666666664,
+        "share_of_run": 0.009273567866685803,
+        "out_shape": "[{\"float\": [12, 32, 100, 100]}]"
+      },
+      {
+        "op": "Add",
+        "node": "/encoder/encoder/layers.N/blocks.N/attention/self/Add_1",
+        "us_per_call": 36693.333333333336,
+        "share_of_run": 0.008752759588140042,
+        "out_shape": "[{\"float\": [1, 12, 32, 100, 100]}]"
+      },
+      {
+        "op": "Slice",
+        "node": "/encoder/encoder/layers.N/blocks.N/Slice_3",
+        "us_per_call": 26180.333333333332,
+        "share_of_run": 0.006245008092406496,
+        "out_shape": "[{\"float\": [1, 40, 25, 1024]}]"
+      },
+      {
+        "op": "Where",
+        "node": "/encoder/encoder/layers.N/blocks.N/Where_36",
+        "us_per_call": 19060.0,
+        "share_of_run": 0.004546537002633064,
+        "out_shape": "[{\"float\": [12, 100, 100]}]"
+      },
+      {
+        "op": "Transpose",
+        "node": "/encoder/encoder/layers.N/blocks.N/Transpose_1",
+        "us_per_call": 18980.0,
+        "share_of_run": 0.004527453951205433,
+        "out_shape": "[{\"float\": [1, 4, 3, 10, 10, 1024]}]"
+      },
+      {
+        "op": "BiasGelu",
+        "node": "BiasGelu",
+        "us_per_call": 18154.0,
+        "share_of_run": 0.0043304214452151435,
+        "out_shape": "[{\"float\": [1, 76800, 512]}]"
+      }
+    ]
+  },
+  "dec": {
+    "model_run_events": 4,
+    "kernel_events": 1564,
+    "skipped_warmup_runs": 1,
+    "measured_runs": 3,
+    "expected_measured_runs": 3,
+    "kernels_per_run_hist": {
+      "391": 3
+    },
+    "full_runs": 3,
+    "complete": true,
+    "run_us_per_call": 125867.33333333333,
+    "kernel_us_per_call": 122982.0,
+    "non_kernel_us_per_call": 2885.3333333333335,
+    "non_kernel_share": 0.022923607396147266,
+    "by_op": {
+      "MatMul": {
+        "us_per_call": 112732.66666666667,
+        "share_of_run": 0.8956467391592206
+      },
+      "MatMul(lm_head)": {
+        "us_per_call": 4706.666666666667,
+        "share_of_run": 0.03739386973585945
+      },
+      "Transpose": {
+        "us_per_call": 2316.6666666666665,
+        "share_of_run": 0.01840562285157388
+      },
+      "Add": {
+        "us_per_call": 1426.3333333333333,
+        "share_of_run": 0.011332037436242393
+      },
+      "FusedMatMul": {
+        "us_per_call": 440.6666666666667,
+        "share_of_run": 0.003501040778385708
+      },
+      "Reshape": {
+        "us_per_call": 363.3333333333333,
+        "share_of_run": 0.0028866372529806517
+      },
+      "Concat": {
+        "us_per_call": 256.3333333333333,
+        "share_of_run": 0.0020365358234331384
+      },
+      "LayerNormalization": {
+        "us_per_call": 136.33333333333334,
+        "share_of_run": 0.0010831510426321895
+      },
+      "Unsqueeze": {
+        "us_per_call": 132.0,
+        "share_of_run": 0.001048723258881044
+      },
+      "Gather": {
+        "us_per_call": 107.0,
+        "share_of_run": 0.000850101429547513
+      },
+      "Mul": {
+        "us_per_call": 83.33333333333333,
+        "share_of_run": 0.0006620727644451036
+      },
+      "Softmax": {
+        "us_per_call": 82.33333333333333,
+        "share_of_run": 0.0006541278912717623
+      },
+      "BiasGelu": {
+        "us_per_call": 69.0,
+        "share_of_run": 0.0005481962489605458
+      },
+      "Shape": {
+        "us_per_call": 59.0,
+        "share_of_run": 0.00046874751722713335
+      },
+      "Where": {
+        "us_per_call": 26.333333333333332,
+        "share_of_run": 0.00020921499356465272
+      },
+      "Equal": {
+        "us_per_call": 13.0,
+        "share_of_run": 0.00010328335125343616
+      },
+      "Expand": {
+        "us_per_call": 10.666666666666666,
+        "share_of_run": 8.474531384897326e-05
+      },
+      "Cast": {
+        "us_per_call": 8.666666666666666,
+        "share_of_run": 6.885556750229077e-05
+      },
+      "Range": {
+        "us_per_call": 6.666666666666667,
+        "share_of_run": 5.2965821155608285e-05
+      },
+      "Sub": {
+        "us_per_call": 5.0,
+        "share_of_run": 3.9724365866706215e-05
+      }
+    },
+    "by_group": {
+      "shape_ops": {
+        "us_per_call": 3304.6666666666665,
+        "share_of_run": 0.026255157546835026
+      },
+      "compute_ops": {
+        "us_per_call": 119677.33333333333,
+        "share_of_run": 0.9508212350570177
+      }
+    },
+    "top_nodes": [
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/encoder_attn/k_proj/MatMul",
+        "us_per_call": 54020.0,
+        "share_of_run": 0.42918204882389394,
+        "out_shape": "[{\"float\": [1, 1200, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/encoder_attn/v_proj/MatMul",
+        "us_per_call": 53266.0,
+        "share_of_run": 0.42319161445119463,
+        "out_shape": "[{\"float\": [1, 1200, 1024]}]"
+      },
+      {
+        "op": "MatMul(lm_head)",
+        "node": "/lm_head/MatMul",
+        "us_per_call": 4706.666666666667,
+        "share_of_run": 0.03739386973585945,
+        "out_shape": "[{\"float\": [1, 1, 57580]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/fc2/MatMul",
+        "us_per_call": 1393.6666666666667,
+        "share_of_run": 0.011072504912579911,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/fc1/MatMul",
+        "us_per_call": 1365.6666666666667,
+        "share_of_run": 0.010850048463726357,
+        "out_shape": "[{\"float\": [1, 1, 4096]}]"
+      },
+      {
+        "op": "Transpose",
+        "node": "/bart_decoder/layers.N/encoder_attn/Transpose_1",
+        "us_per_call": 1105.3333333333333,
+        "share_of_run": 0.008781733147599854,
+        "out_shape": "[{\"float\": [1, 16, 1200, 64]}]"
+      },
+      {
+        "op": "Transpose",
+        "node": "/bart_decoder/layers.N/encoder_attn/Transpose",
+        "us_per_call": 1090.0,
+        "share_of_run": 0.008659911758941955,
+        "out_shape": "[{\"float\": [1, 16, 1200, 64]}]"
+      },
+      {
+        "op": "Add",
+        "node": "/bart_decoder/layers.N/encoder_attn/k_proj/Add",
+        "us_per_call": 566.0,
+        "share_of_run": 0.0044967982161111435,
+        "out_shape": "[{\"float\": [1, 1200, 1024]}]"
+      },
+      {
+        "op": "Add",
+        "node": "/bart_decoder/layers.N/encoder_attn/v_proj/Add",
+        "us_per_call": 548.3333333333334,
+        "share_of_run": 0.004356438790048781,
+        "out_shape": "[{\"float\": [1, 1200, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/encoder_attn/MatMul_1",
+        "us_per_call": 405.6666666666667,
+        "share_of_run": 0.003222970217318764,
+        "out_shape": "[{\"float\": [16, 1, 64]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/self_attn/k_proj/MatMul",
+        "us_per_call": 388.6666666666667,
+        "share_of_run": 0.003087907373371963,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "FusedMatMul",
+        "node": "/bart_decoder/layers.N/encoder_attn/MatMul/MatmulTransposeFusion/",
+        "us_per_call": 385.6666666666667,
+        "share_of_run": 0.0030640727538519394,
+        "out_shape": "[{\"float\": [16, 1, 1200]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/self_attn/q_proj/MatMul",
+        "us_per_call": 380.0,
+        "share_of_run": 0.0030190518058696722,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/encoder_attn/q_proj/MatMul",
+        "us_per_call": 376.6666666666667,
+        "share_of_run": 0.002992568895291868,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/encoder_attn/out_proj/MatMul",
+        "us_per_call": 366.6666666666667,
+        "share_of_run": 0.002913120163558456,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/self_attn/out_proj/MatMul",
+        "us_per_call": 366.0,
+        "share_of_run": 0.002907823581442895,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/self_attn/v_proj/MatMul",
+        "us_per_call": 354.3333333333333,
+        "share_of_run": 0.0028151333944205804,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "Softmax",
+        "node": "/bart_decoder/layers.N/encoder_attn/Softmax",
+        "us_per_call": 58.0,
+        "share_of_run": 0.0004608026440537921,
+        "out_shape": "[{\"float\": [16, 1, 1200]}]"
+      },
+      {
+        "op": "FusedMatMul",
+        "node": "/bart_decoder/layers.N/self_attn/MatMul/MatmulTransposeFusion/",
+        "us_per_call": 55.0,
+        "share_of_run": 0.00043696802453376834,
+        "out_shape": "[{\"float\": [16, 1, 1]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/self_attn/MatMul_1",
+        "us_per_call": 49.333333333333336,
+        "share_of_run": 0.0003919470765515013,
+        "out_shape": "[{\"float\": [16, 1, 64]}]"
+      }
+    ]
+  },
+  "dec_p": {
+    "model_run_events": 212,
+    "kernel_events": 51092,
+    "skipped_warmup_runs": 52,
+    "measured_runs": 160,
+    "expected_measured_runs": 160,
+    "kernels_per_run_hist": {
+      "241": 160
+    },
+    "full_runs": 160,
+    "complete": true,
+    "run_us_per_call": 14656.20625,
+    "kernel_us_per_call": 13185.2,
+    "non_kernel_us_per_call": 1471.00625,
+    "non_kernel_share": 0.10036746378347398,
+    "by_op": {
+      "MatMul": {
+        "us_per_call": 5129.69375,
+        "share_of_run": 0.3500014712197435
+      },
+      "MatMul(lm_head)": {
+        "us_per_call": 4780.45625,
+        "share_of_run": 0.3261728286608958
+      },
+      "MultiHeadAttention": {
+        "us_per_call": 2099.0625,
+        "share_of_run": 0.14322004372720942
+      },
+      "Concat": {
+        "us_per_call": 264.60625,
+        "share_of_run": 0.01805421167568517
+      },
+      "Reshape": {
+        "us_per_call": 145.68125,
+        "share_of_run": 0.009939901739578753
+      },
+      "SkipLayerNormalization": {
+        "us_per_call": 138.625,
+        "share_of_run": 0.009458450409020411
+      },
+      "Add": {
+        "us_per_call": 107.9,
+        "share_of_run": 0.007362068884640594
+      },
+      "BiasGelu": {
+        "us_per_call": 92.96875,
+        "share_of_run": 0.006343302517320947
+      },
+      "Gather": {
+        "us_per_call": 81.01875,
+        "share_of_run": 0.005527948271060937
+      },
+      "Unsqueeze": {
+        "us_per_call": 67.1,
+        "share_of_run": 0.004578265265610601
+      },
+      "Transpose": {
+        "us_per_call": 61.04375,
+        "share_of_run": 0.004165044415910837
+      },
+      "FusedMatMul": {
+        "us_per_call": 49.8375,
+        "share_of_run": 0.0034004365897893937
+      },
+      "Mul": {
+        "us_per_call": 44.9625,
+        "share_of_run": 0.0030678129956038247
+      },
+      "Shape": {
+        "us_per_call": 33.93125,
+        "share_of_run": 0.0023151455036326337
+      },
+      "Where": {
+        "us_per_call": 18.80625,
+        "share_of_run": 0.0012831594806466374
+      },
+      "Softmax": {
+        "us_per_call": 18.20625,
+        "share_of_run": 0.0012422211921314904
+      },
+      "LayerNormalization": {
+        "us_per_call": 15.15,
+        "share_of_run": 0.0010336917850074605
+      },
+      "Equal": {
+        "us_per_call": 9.55625,
+        "share_of_run": 0.0006520275327047885
+      },
+      "Expand": {
+        "us_per_call": 9.33125,
+        "share_of_run": 0.0006366756745116083
+      },
+      "Cast": {
+        "us_per_call": 8.1,
+        "share_of_run": 0.0005526668949544838
+      },
+      "Range": {
+        "us_per_call": 4.8625,
+        "share_of_run": 0.0003317707131748368
+      },
+      "Sub": {
+        "us_per_call": 4.3,
+        "share_of_run": 0.0002933910676918865
+      }
+    },
+    "by_group": {
+      "shape_ops": {
+        "us_per_call": 708.3375,
+        "share_of_run": 0.04833020823516317
+      },
+      "compute_ops": {
+        "us_per_call": 12476.8625,
+        "share_of_run": 0.8513023279813628
+      }
+    },
+    "top_nodes": [
+      {
+        "op": "MatMul(lm_head)",
+        "node": "/lm_head/MatMul",
+        "us_per_call": 4780.45625,
+        "share_of_run": 0.3261728286608958,
+        "out_shape": "[{\"float\": [1, 1, 57580]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/fc2/MatMul",
+        "us_per_call": 1415.6375,
+        "share_of_run": 0.09658962734643557,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/fc1/MatMul",
+        "us_per_call": 1409.56875,
+        "share_of_run": 0.09617555361572508,
+        "out_shape": "[{\"float\": [1, 1, 4096]}]"
+      },
+      {
+        "op": "MultiHeadAttention",
+        "node": "Attention_1",
+        "us_per_call": 527.4375,
+        "share_of_run": 0.03598731424784637,
+        "out_shape": "[{\"float\": [1, 1, 1024]}, {\"float\": [1, 16, 1200, 64]}, {\"float\": [1, 16, 1200, "
+      },
+      {
+        "op": "MultiHeadAttention",
+        "node": "Attention_2",
+        "us_per_call": 524.91875,
+        "share_of_run": 0.035815458724183825,
+        "out_shape": "[{\"float\": [1, 1, 1024]}, {\"float\": [1, 16, 1200, 64]}, {\"float\": [1, 16, 1200, "
+      },
+      {
+        "op": "MultiHeadAttention",
+        "node": "Attention_3",
+        "us_per_call": 524.4,
+        "share_of_run": 0.03578006416223844,
+        "out_shape": "[{\"float\": [1, 1, 1024]}, {\"float\": [1, 16, 1200, 64]}, {\"float\": [1, 16, 1200, "
+      },
+      {
+        "op": "MultiHeadAttention",
+        "node": "Attention_0",
+        "us_per_call": 522.30625,
+        "share_of_run": 0.03563720659294079,
+        "out_shape": "[{\"float\": [1, 1, 1024]}, {\"float\": [1, 16, 1200, 64]}, {\"float\": [1, 16, 1200, "
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/self_attn/v_proj/MatMul",
+        "us_per_call": 384.5125,
+        "share_of_run": 0.026235472771134073,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/encoder_attn/out_proj/MatMul",
+        "us_per_call": 379.275,
+        "share_of_run": 0.02587811562763727,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/encoder_attn/q_proj/MatMul",
+        "us_per_call": 377.7625,
+        "share_of_run": 0.02577491702533867,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/self_attn/q_proj/MatMul",
+        "us_per_call": 377.6125,
+        "share_of_run": 0.025764682453209883,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/self_attn/out_proj/MatMul",
+        "us_per_call": 369.5375,
+        "share_of_run": 0.025213721320276862,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/self_attn/k_proj/MatMul",
+        "us_per_call": 367.65,
+        "share_of_run": 0.025084936287656297,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "Concat",
+        "node": "/bart_decoder/layers.N/self_attn/Concat_3",
+        "us_per_call": 100.5,
+        "share_of_run": 0.006857163326287115,
+        "out_shape": "[{\"float\": [1, 16, 60, 64]}]"
+      },
+      {
+        "op": "Concat",
+        "node": "/bart_decoder/layers.N/self_attn/Concat_2",
+        "us_per_call": 70.19375,
+        "share_of_run": 0.004789353315766827,
+        "out_shape": "[{\"float\": [1, 16, 60, 64]}]"
+      },
+      {
+        "op": "FusedMatMul",
+        "node": "/bart_decoder/layers.N/self_attn/MatMul/MatmulTransposeFusion/",
+        "us_per_call": 49.8375,
+        "share_of_run": 0.0034004365897893937,
+        "out_shape": "[{\"float\": [16, 1, 60]}]"
+      },
+      {
+        "op": "MatMul",
+        "node": "/bart_decoder/layers.N/self_attn/MatMul_1",
+        "us_per_call": 48.1375,
+        "share_of_run": 0.003284444772329811,
+        "out_shape": "[{\"float\": [16, 1, 64]}]"
+      },
+      {
+        "op": "Add",
+        "node": "/bart_decoder/layers.N/self_attn/k_proj/Add",
+        "us_per_call": 26.225,
+        "share_of_run": 0.0017893443605162148,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      },
+      {
+        "op": "BiasGelu",
+        "node": "Gelu_AddBias_2",
+        "us_per_call": 25.425,
+        "share_of_run": 0.0017347599758293522,
+        "out_shape": "[{\"float\": [1, 1, 4096]}]"
+      },
+      {
+        "op": "Add",
+        "node": "/bart_decoder/layers.N/self_attn/v_proj/Add",
+        "us_per_call": 25.41875,
+        "share_of_run": 0.001734333535323986,
+        "out_shape": "[{\"float\": [1, 1, 1024]}]"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+#!/bin/bash
+W=<WORK_DIR>/donut_official_assets/scripts/donut_mem_watch.sh
+$W fuse <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed <VENV>/bin/python -I <WORK_DIR>/donut_official_assets/scripts/donut_fuse_mha.py --step fuse --raw-bundle <WORK_DIR>/donut_official_onnx_raw_20261018T0950Z_967829/bundle --out <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed > <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/watch_fuse.log 2>&1
+grep -q "rc=0 killed=0" <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/watch_fuse.log || { echo STOP fuse; exit 1; }
+$W simplify <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed <VENV>/bin/python -I <WORK_DIR>/donut_official_assets/scripts/donut_fuse_mha.py --step simplify --raw-bundle <WORK_DIR>/donut_official_onnx_raw_20261018T0950Z_967829/bundle --out <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed > <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/watch_simplify.log 2>&1
+grep -q "rc=0 killed=0" <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/watch_simplify.log || { echo STOP simplify; exit 1; }
+$W finalize <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed <VENV>/bin/python -I <WORK_DIR>/donut_official_assets/scripts/donut_fuse_mha.py --step finalize --raw-bundle <WORK_DIR>/donut_official_onnx_raw_20261018T0950Z_967829/bundle --out <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed --model-dir <WORK_DIR>/donut_official_assets/model --manifest <WORK_DIR>/donut_official_assets/cord_v2/test/manifest.json --extra-path <WORK_DIR>/donut_official_assets/pylib_sentencepiece > <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/watch_finalize.log 2>&1
+grep -q "rc=0 killed=0" <WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/watch_finalize.log || { echo STOP finalize; exit 1; }
+echo ALL_DONE

@@ -1,0 +1,176 @@
+{
+  "run_dir": "<WORK_DIR>/donut_official_pair_mha2_20261018T1253Z_512992",
+  "tag": "onnx_mha2",
+  "n_images": 100,
+  "n_process_runs": 4,
+  "environment": {
+    "hostname": "<pod>",
+    "python": "3.9.6",
+    "executable": "<VENV>/bin/python",
+    "versions": {
+      "torch": "2.0.1+cpu",
+      "transformers": "4.25.1",
+      "tokenizers": "0.13.3",
+      "sentencepiece": "0.2.2",
+      "numpy": "1.26.4",
+      "Pillow": "11.3.0",
+      "onnx": "1.16.2",
+      "onnxruntime": "1.18.1"
+    },
+    "cpu_quota": "400000 100000",
+    "memory_max": "8589934592",
+    "torch_intra_threads": 2,
+    "torch_interop_threads": 16,
+    "tokenizer_class": "XLMRobertaTokenizerFast",
+    "sentencepiece_file": "<WORK_DIR>/donut_official_assets/pylib_sentencepiece/sentencepiece/__init__.py",
+    "weight_sha256": null,
+    "script_sha256": "df8cf99eb41f684fa79f9bcf169222fa1eb258805871e276b323e44840457bef",
+    "max_length": 768,
+    "forced_eos_token_id_top": null,
+    "forced_eos_token_id_decoder": null,
+    "n_params": null,
+    "lm_head_shape": null,
+    "lm_head_tied_to_embed": null,
+    "encoder_output_shape": [
+      1,
+      1200,
+      1024
+    ],
+    "pixel_values_shape": [
+      1,
+      3,
+      1280,
+      960
+    ],
+    "load_s": 6.335,
+    "process_maxrss_kib": 4434092,
+    "load_avg_start": [
+      2.62,
+      2.47,
+      1.85
+    ],
+    "load_avg_end": [
+      2.43,
+      2.48,
+      1.95
+    ],
+    "created_utc": "2026-10-18T13:09:15.977612+00:00",
+    "finished_utc": "2026-10-18T13:11:41.295822+00:00"
+  },
+  "segments_ms": {
+    "elapsed_ms": {
+      "n": 100,
+      "median": 5289.58729468286,
+      "mean": 5471.958366185427,
+      "p95": 6964.979377388954,
+      "min": 4576.724950224161,
+      "max": 8352.109238505363
+    },
+    "preprocess_ms": {
+      "n": 100,
+      "median": 49.44233596324921,
+      "mean": 54.55220885574818,
+      "p95": 103.53650916367769,
+      "min": 27.164902538061142,
+      "max": 112.16136813163757
+    },
+    "generate_ms": {
+      "n": 100,
+      "median": 5202.6040479540825,
+      "mean": 5376.160285845399,
+      "p95": 6856.510319374502,
+      "min": 4490.767333656549,
+      "max": 8272.424802184105
+    },
+    "encoder_ms": {
+      "n": 100,
+      "median": 4144.035171717405,
+      "mean": 4145.18672388047,
+      "p95": 4162.602595984936,
+      "min": 4125.3217197954655,
+      "max": 4179.104022681713
+    },
+    "decoder_ms": {
+      "n": 100,
+      "median": 1028.5678207874298,
+      "mean": 1208.1426607072353,
+      "p95": 2663.7816520407796,
+      "min": 338.1163328886032,
+      "max": 4062.591217458248
+    },
+    "prob_ms": {
+      "n": 100,
+      "median": 0.0,
+      "mean": 0.0,
+      "p95": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "postprocess_ms": {
+      "n": 100,
+      "median": 41.20033048093319,
+      "mean": 41.24587148427963,
+      "p95": 42.84261558204889,
+      "min": 39.6871417760849,
+      "max": 43.86179894208908
+    }
+  },
+  "n_generated": {
+    "n": 100,
+    "median": 60.5,
+    "mean": 73.12,
+    "p95": 169.05,
+    "min": 16,
+    "max": 252
+  },
+  "hit_max_length": 0,
+  "ended_with_eos": 100,
+  "encoder_calls_per_image": [
+    1
+  ],
+  "decoder_ms_per_step": {
+    "n": 100,
+    "median": 16.812199499737325,
+    "mean": 16.918517886916526,
+    "p95": 18.428858456389946,
+    "min": 15.511409193277359,
+    "max": 21.1322708055377
+  },
+  "generate_loop_overhead_ms": {
+    "n": 100,
+    "median": 18.644720315933228,
+    "mean": 22.830901257693768,
+    "p95": 48.12104105949401,
+    "min": 5.3586214780807495,
+    "max": 71.44436612725258
+  },
+  "encoder_share": {
+    "of_median_elapsed": 0.7834326084159772,
+    "per_image": {
+      "n": 100,
+      "median": 0.7867380093789462,
+      "mean": 0.7669445525358122,
+      "p95": 0.8636050127343924,
+      "min": 0.4954903127367599,
+      "max": 0.9061703345504163
+    }
+  },
+  "fit_elapsed_vs_n_generated": {
+    "intercept_ms": 4331.78087257215,
+    "slope_ms_per_token": 15.593237057074349,
+    "r2": 0.9983596035299928
+  },
+  "fit_decoder_ms_vs_n_generated": {
+    "intercept_ms": 90.93696667590893,
+    "slope_ms_per_token": 15.27907130786825,
+    "r2": 0.999219140574782
+  },
+  "min_token_probability": {
+    "n": 100,
+    "median": 0.7792549133300781,
+    "mean": 0.7394169360399246,
+    "p95": 0.9989506423473358,
+    "min": 0.22501689195632935,
+    "max": 0.9998218417167664
+  }
+}

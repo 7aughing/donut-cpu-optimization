@@ -1,0 +1,7 @@
+START onnx_mha2_xkv 2026-10-18T13:38:17Z load 1.04 0.71 0.86
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+IMG onnx_mha2_xkv cord_test_000.png 4949ms gen 53 enc 4133ms maxrss_MiB 4128
+IMG onnx_mha2_xkv cord_test_001.png 4899ms gen 50 enc 4138ms maxrss_MiB 4131
+IMG onnx_mha2_xkv cord_test_002.png 5038ms gen 60 enc 4143ms maxrss_MiB 4131
+DONE onnx_mha2_xkv records 3 skipped 0 maxrss_kib 4230872
+EXIT onnx_mha2_xkv rc=0 killed=0 peak_anon=4340256768 2026-10-18T13:38:46Z

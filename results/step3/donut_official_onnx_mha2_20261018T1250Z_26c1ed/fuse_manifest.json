@@ -1,0 +1,504 @@
+{
+  "created_utc": "2026-10-18T12:51:07.496635+00:00",
+  "raw_bundle": "<WORK_DIR>/donut_official_onnx_raw_20261018T0950Z_967829/bundle",
+  "steps": {
+    "fuse": {
+      "step": "fuse",
+      "created_utc": "2026-10-18T12:50:37.967139+00:00",
+      "script_sha256": "47f8a396263d1d042edd720862e1510f70c4bd7a8bbb0bec37b72981075866e9",
+      "python": "3.9.6",
+      "versions": {
+        "onnx": "1.16.2",
+        "onnxruntime": "1.18.1",
+        "onnx-simplifier": "0.4.36",
+        "numpy": "1.26.4",
+        "torch": "2.0.1+cpu",
+        "transformers": "4.25.1"
+      },
+      "source": "<WORK_DIR>/donut_official_onnx_raw_20261018T0950Z_967829/bundle/decoder_with_past.onnx",
+      "opt_level": null,
+      "fusion_options": {
+        "enable_gelu": true,
+        "enable_layer_norm": true,
+        "enable_attention": true,
+        "enable_rotary_embeddings": true,
+        "use_multi_head_attention": true,
+        "disable_multi_head_attention_bias": false,
+        "enable_skip_layer_norm": true,
+        "enable_embed_layer_norm": true,
+        "enable_bias_skip_layer_norm": true,
+        "enable_bias_gelu": true,
+        "enable_gelu_approximation": false,
+        "enable_qordered_matmul": true,
+        "enable_shape_inference": true,
+        "enable_gemm_fast_gelu": false,
+        "group_norm_channels_last": true,
+        "attention_mask_format": 2,
+        "attention_op_type": null
+      },
+      "fused_operator_statistics": {
+        "EmbedLayerNormalization": 0,
+        "Attention": 0,
+        "MultiHeadAttention": 4,
+        "Gelu": 0,
+        "FastGelu": 0,
+        "BiasGelu": 4,
+        "GemmFastGelu": 0,
+        "LayerNormalization": 2,
+        "SimplifiedLayerNormalization": 0,
+        "SkipLayerNormalization": 12,
+        "SkipSimplifiedLayerNormalization": 0,
+        "RotaryEmbedding": 0,
+        "QOrderedAttention": 0,
+        "QOrderedGelu": 0,
+        "QOrderedLayerNormalization": 0,
+        "QOrderedMatMul": 0
+      },
+      "output": "<WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/intermediate/decoder_with_past.fused.onnx",
+      "bytes": 710135751,
+      "sha256": "6f43afa680e89e2ed3959a2234c6b5ab945d6cd0494c0b0c8a1b68ee8ed97c44",
+      "elapsed_s": 10.67,
+      "maxrss_mib": 4114
+    },
+    "simplify": {
+      "step": "simplify",
+      "created_utc": "2026-10-18T12:50:50.411041+00:00",
+      "script_sha256": "47f8a396263d1d042edd720862e1510f70c4bd7a8bbb0bec37b72981075866e9",
+      "python": "3.9.6",
+      "versions": {
+        "onnx": "1.16.2",
+        "onnxruntime": "1.18.1",
+        "onnx-simplifier": "0.4.36",
+        "numpy": "1.26.4",
+        "torch": "2.0.1+cpu",
+        "transformers": "4.25.1"
+      },
+      "nodes_before": 307,
+      "nodes_after": 245,
+      "onnxsim_check": true,
+      "output": "<WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/bundle/decoder_with_past.onnx",
+      "bytes": 710123785,
+      "sha256": "8a2e889b90d978a64a12407e70cc5584a08723ddcf5fb8ee4022b585e106362f",
+      "elapsed_s": 16.5,
+      "maxrss_mib": 6170
+    }
+  },
+  "graphs": {
+    "encoder.onnx": {
+      "bytes": 311965091,
+      "sha256": "fa5c2951233a063e3ffc498dfc1c21661757ba7df1ed0ee093e27d6d9768169b",
+      "n_nodes": 15999,
+      "opset_imports": {
+        "ai.onnx": 17
+      },
+      "top_ops": [
+        [
+          "Constant",
+          6414
+        ],
+        [
+          "Shape",
+          1499
+        ],
+        [
+          "Unsqueeze",
+          1188
+        ],
+        [
+          "Gather",
+          778
+        ],
+        [
+          "Reshape",
+          697
+        ],
+        [
+          "Cast",
+          622
+        ],
+        [
+          "Concat",
+          580
+        ],
+        [
+          "Slice",
+          569
+        ],
+        [
+          "Add",
+          486
+        ],
+        [
+          "ConstantOfShape",
+          480
+        ],
+        [
+          "Expand",
+          450
+        ],
+        [
+          "Mul",
+          407
+        ],
+        [
+          "Equal",
+          380
+        ],
+        [
+          "Where",
+          380
+        ],
+        [
+          "Range",
+          360
+        ]
+      ]
+    },
+    "decoder.onnx": {
+      "bytes": 743776030,
+      "sha256": "faa65092ca096c896628f72fb65ef0176fd09bc8d06503222f204b310b8deaec",
+      "n_nodes": 877,
+      "opset_imports": {
+        "ai.onnx": 17
+      },
+      "top_ops": [
+        [
+          "Constant",
+          324
+        ],
+        [
+          "Unsqueeze",
+          119
+        ],
+        [
+          "Concat",
+          75
+        ],
+        [
+          "Reshape",
+          75
+        ],
+        [
+          "Add",
+          62
+        ],
+        [
+          "MatMul",
+          57
+        ],
+        [
+          "Transpose",
+          40
+        ],
+        [
+          "Mul",
+          27
+        ],
+        [
+          "Shape",
+          26
+        ],
+        [
+          "Gather",
+          26
+        ],
+        [
+          "LayerNormalization",
+          14
+        ],
+        [
+          "Softmax",
+          8
+        ],
+        [
+          "Cast",
+          5
+        ],
+        [
+          "Div",
+          4
+        ],
+        [
+          "Erf",
+          4
+        ]
+      ]
+    },
+    "decoder_with_past.onnx": {
+      "bytes": 710123785,
+      "sha256": "8a2e889b90d978a64a12407e70cc5584a08723ddcf5fb8ee4022b585e106362f",
+      "n_nodes": 245,
+      "opset_imports": {
+        "ai.onnx": 17,
+        "ai.onnx.ml": 5,
+        "ai.onnx.training": 1,
+        "ai.onnx.preview.training": 1,
+        "com.microsoft": 1,
+        "com.microsoft.experimental": 1,
+        "com.microsoft.nchwc": 1,
+        "org.pytorch.aten": 1
+      },
+      "top_ops": [
+        [
+          "MatMul",
+          41
+        ],
+        [
+          "Reshape",
+          40
+        ],
+        [
+          "Concat",
+          30
+        ],
+        [
+          "Unsqueeze",
+          20
+        ],
+        [
+          "Transpose",
+          20
+        ],
+        [
+          "Add",
+          19
+        ],
+        [
+          "Gather",
+          18
+        ],
+        [
+          "com.microsoft:SkipLayerNormalization",
+          12
+        ],
+        [
+          "Shape",
+          11
+        ],
+        [
+          "Mul",
+          9
+        ],
+        [
+          "Softmax",
+          4
+        ],
+        [
+          "com.microsoft:MultiHeadAttention",
+          4
+        ],
+        [
+          "com.microsoft:BiasGelu",
+          4
+        ],
+        [
+          "Where",
+          3
+        ],
+        [
+          "Equal",
+          2
+        ]
+      ]
+    }
+  },
+  "structure": {
+    "fused_ops": {
+      "MatMul": 41,
+      "Reshape": 40,
+      "Concat": 30,
+      "Unsqueeze": 20,
+      "Transpose": 20,
+      "Add": 19,
+      "Gather": 18,
+      "com.microsoft:SkipLayerNormalization": 12,
+      "Shape": 11,
+      "Mul": 9,
+      "Softmax": 4,
+      "com.microsoft:MultiHeadAttention": 4,
+      "com.microsoft:BiasGelu": 4,
+      "Where": 3,
+      "Equal": 2,
+      "Expand": 2,
+      "LayerNormalization": 2,
+      "Cast": 2,
+      "Range": 1,
+      "Sub": 1
+    },
+    "mha": [
+      {
+        "name": "Attention_0",
+        "inputs": [
+          "/bart_decoder/layers.0/encoder_attn/q_proj/MatMul_output_0",
+          "past_0_cross_k",
+          "past_0_cross_v",
+          "Attention_0_qkv_bias"
+        ],
+        "outputs": [
+          "/bart_decoder/layers.0/encoder_attn/Reshape_5_output_0",
+          "present_0_cross_k",
+          "present_0_cross_v"
+        ],
+        "key_from": "past_0_cross_k",
+        "key_shape": [
+          "batch",
+          16,
+          1200,
+          64
+        ],
+        "value_shape": [
+          "batch",
+          16,
+          1200,
+          64
+        ],
+        "attributes": {
+          "num_heads": 16
+        }
+      },
+      {
+        "name": "Attention_1",
+        "inputs": [
+          "/bart_decoder/layers.1/encoder_attn/q_proj/MatMul_output_0",
+          "past_1_cross_k",
+          "past_1_cross_v",
+          "Attention_1_qkv_bias"
+        ],
+        "outputs": [
+          "/bart_decoder/layers.1/encoder_attn/Reshape_5_output_0",
+          "present_1_cross_k",
+          "present_1_cross_v"
+        ],
+        "key_from": "past_1_cross_k",
+        "key_shape": [
+          "batch",
+          16,
+          1200,
+          64
+        ],
+        "value_shape": [
+          "batch",
+          16,
+          1200,
+          64
+        ],
+        "attributes": {
+          "num_heads": 16
+        }
+      },
+      {
+        "name": "Attention_2",
+        "inputs": [
+          "/bart_decoder/layers.2/encoder_attn/q_proj/MatMul_output_0",
+          "past_2_cross_k",
+          "past_2_cross_v",
+          "Attention_2_qkv_bias"
+        ],
+        "outputs": [
+          "/bart_decoder/layers.2/encoder_attn/Reshape_5_output_0",
+          "present_2_cross_k",
+          "present_2_cross_v"
+        ],
+        "key_from": "past_2_cross_k",
+        "key_shape": [
+          "batch",
+          16,
+          1200,
+          64
+        ],
+        "value_shape": [
+          "batch",
+          16,
+          1200,
+          64
+        ],
+        "attributes": {
+          "num_heads": 16
+        }
+      },
+      {
+        "name": "Attention_3",
+        "inputs": [
+          "/bart_decoder/layers.3/encoder_attn/q_proj/MatMul_output_0",
+          "past_3_cross_k",
+          "past_3_cross_v",
+          "Attention_3_qkv_bias"
+        ],
+        "outputs": [
+          "/bart_decoder/layers.3/encoder_attn/Reshape_5_output_0",
+          "present_3_cross_k",
+          "present_3_cross_v"
+        ],
+        "key_from": "past_3_cross_k",
+        "key_shape": [
+          "batch",
+          16,
+          1200,
+          64
+        ],
+        "value_shape": [
+          "batch",
+          16,
+          1200,
+          64
+        ],
+        "attributes": {
+          "num_heads": 16
+        }
+      }
+    ],
+    "raw_ops": {
+      "Constant": 292,
+      "Unsqueeze": 111,
+      "Concat": 75,
+      "Reshape": 67,
+      "Add": 55,
+      "MatMul": 49,
+      "Transpose": 32,
+      "Shape": 27,
+      "Gather": 27,
+      "Mul": 27,
+      "LayerNormalization": 14,
+      "Softmax": 8,
+      "Identity": 8,
+      "Cast": 6,
+      "Div": 4,
+      "Erf": 4,
+      "Where": 3,
+      "ConstantOfShape": 2,
+      "Equal": 2,
+      "Expand": 2,
+      "Sub": 1,
+      "Range": 1
+    }
+  },
+  "single_step": {
+    "image": "cord_test_000.png",
+    "first_token": 57526,
+    "logits_max_abs_diff": 5.7220458984375e-05,
+    "next_token_raw": 57528,
+    "next_token_fused": 57528,
+    "present_self_max_abs_diff": 2.384185791015625e-06,
+    "fused_outputs": [
+      "logits",
+      "present_0_cross_k",
+      "present_0_cross_v",
+      "present_0_self_k",
+      "present_0_self_v",
+      "present_1_cross_k",
+      "present_1_cross_v",
+      "present_1_self_k",
+      "present_1_self_v",
+      "present_2_cross_k",
+      "present_2_cross_v",
+      "present_2_self_k",
+      "present_2_self_v",
+      "present_3_cross_k",
+      "present_3_cross_v",
+      "present_3_self_k",
+      "present_3_self_v"
+    ],
+    "next_token_identical": true
+  },
+  "finished_utc": "2026-10-18T12:51:34.695354+00:00"
+}

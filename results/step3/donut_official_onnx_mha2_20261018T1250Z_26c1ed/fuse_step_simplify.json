@@ -1,0 +1,22 @@
+{
+  "step": "simplify",
+  "created_utc": "2026-10-18T12:50:50.411041+00:00",
+  "script_sha256": "47f8a396263d1d042edd720862e1510f70c4bd7a8bbb0bec37b72981075866e9",
+  "python": "3.9.6",
+  "versions": {
+    "onnx": "1.16.2",
+    "onnxruntime": "1.18.1",
+    "onnx-simplifier": "0.4.36",
+    "numpy": "1.26.4",
+    "torch": "2.0.1+cpu",
+    "transformers": "4.25.1"
+  },
+  "nodes_before": 307,
+  "nodes_after": 245,
+  "onnxsim_check": true,
+  "output": "<WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/bundle/decoder_with_past.onnx",
+  "bytes": 710123785,
+  "sha256": "8a2e889b90d978a64a12407e70cc5584a08723ddcf5fb8ee4022b585e106362f",
+  "elapsed_s": 16.5,
+  "maxrss_mib": 6170
+}

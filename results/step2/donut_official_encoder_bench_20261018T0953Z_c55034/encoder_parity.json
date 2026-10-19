@@ -1,0 +1,170 @@
+{
+  "created_utc": "2026-10-18T09:53:10.378272+00:00",
+  "mode": "parity",
+  "backend": null,
+  "round": 0,
+  "hostname": "<pod>",
+  "executable": "<VENV>/bin/python",
+  "versions": {
+    "torch": "2.0.1+cpu",
+    "transformers": "4.25.1",
+    "onnxruntime": "1.18.1",
+    "numpy": "1.26.4"
+  },
+  "torch_intra_threads": 2,
+  "ort_intra": 2,
+  "ort_inter": 1,
+  "load_avg_start": [
+    2.09,
+    1.89,
+    1.74
+  ],
+  "script_sha256": "33c9b60075b34784f6b5de2efa66fa92975e1482ef4305931f144e6b0b3b6a2c",
+  "n_images": 10,
+  "repeats": 3,
+  "ort_graph_optimization_level": "GraphOptimizationLevel.ORT_ENABLE_ALL",
+  "results": [
+    {
+      "file": "cord_test_000.png",
+      "shape": [
+        1,
+        1200,
+        1024
+      ],
+      "max_abs_diff": 0.0120086669921875,
+      "mean_abs_diff": 3.43378667634416e-06,
+      "ref_max_abs": 170.14630126953125,
+      "cosine_all": 0.9999999997591449,
+      "cosine_min_per_position": 0.9999998478162605
+    },
+    {
+      "file": "cord_test_001.png",
+      "shape": [
+        1,
+        1200,
+        1024
+      ],
+      "max_abs_diff": 0.0006494522094726562,
+      "mean_abs_diff": 1.2040910310181138e-06,
+      "ref_max_abs": 171.11959838867188,
+      "cosine_all": 0.999999999996708,
+      "cosine_min_per_position": 0.999999995746825
+    },
+    {
+      "file": "cord_test_002.png",
+      "shape": [
+        1,
+        1200,
+        1024
+      ],
+      "max_abs_diff": 0.003482818603515625,
+      "mean_abs_diff": 1.3382084887799312e-06,
+      "ref_max_abs": 185.11904907226562,
+      "cosine_all": 0.9999999999845505,
+      "cosine_min_per_position": 0.9999999527485266
+    },
+    {
+      "file": "cord_test_003.png",
+      "shape": [
+        1,
+        1200,
+        1024
+      ],
+      "max_abs_diff": 0.0006866455078125,
+      "mean_abs_diff": 1.2583319196816472e-06,
+      "ref_max_abs": 165.11758422851562,
+      "cosine_all": 0.9999999999947392,
+      "cosine_min_per_position": 0.9999999675361315
+    },
+    {
+      "file": "cord_test_004.png",
+      "shape": [
+        1,
+        1200,
+        1024
+      ],
+      "max_abs_diff": 0.0014472007751464844,
+      "mean_abs_diff": 1.2108269988194328e-06,
+      "ref_max_abs": 178.673828125,
+      "cosine_all": 0.9999999999959087,
+      "cosine_min_per_position": 0.9999999806899692
+    },
+    {
+      "file": "cord_test_005.png",
+      "shape": [
+        1,
+        1200,
+        1024
+      ],
+      "max_abs_diff": 0.0029382705688476562,
+      "mean_abs_diff": 1.4808015223148156e-06,
+      "ref_max_abs": 164.01791381835938,
+      "cosine_all": 0.9999999999796235,
+      "cosine_min_per_position": 0.9999999297281369
+    },
+    {
+      "file": "cord_test_006.png",
+      "shape": [
+        1,
+        1200,
+        1024
+      ],
+      "max_abs_diff": 0.000438690185546875,
+      "mean_abs_diff": 1.1554195314763167e-06,
+      "ref_max_abs": 184.0615234375,
+      "cosine_all": 0.9999999999973088,
+      "cosine_min_per_position": 0.9999999974972449
+    },
+    {
+      "file": "cord_test_007.png",
+      "shape": [
+        1,
+        1200,
+        1024
+      ],
+      "max_abs_diff": 0.000812530517578125,
+      "mean_abs_diff": 1.2086580316624425e-06,
+      "ref_max_abs": 177.2612762451172,
+      "cosine_all": 0.9999999999966793,
+      "cosine_min_per_position": 0.9999999957250942
+    },
+    {
+      "file": "cord_test_008.png",
+      "shape": [
+        1,
+        1200,
+        1024
+      ],
+      "max_abs_diff": 0.0007534027099609375,
+      "mean_abs_diff": 1.2027287323235215e-06,
+      "ref_max_abs": 188.48670959472656,
+      "cosine_all": 0.9999999999965684,
+      "cosine_min_per_position": 0.9999999957481576
+    },
+    {
+      "file": "cord_test_009.png",
+      "shape": [
+        1,
+        1200,
+        1024
+      ],
+      "max_abs_diff": 0.000762939453125,
+      "mean_abs_diff": 1.1498266212347138e-06,
+      "ref_max_abs": 176.51797485351562,
+      "cosine_all": 0.9999999999971705,
+      "cosine_min_per_position": 0.9999999992797403
+    }
+  ],
+  "summary": {
+    "max_abs_diff": 0.0120086669921875,
+    "mean_abs_diff_mean": 1.4642679553655096e-06,
+    "cosine_min_per_position": 0.9999998478162605
+  },
+  "load_avg_end": [
+    3.6,
+    2.44,
+    1.95
+  ],
+  "process_maxrss_kib": 3157368,
+  "finished_utc": "2026-10-18T09:54:52.114945+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "step": "encoder",
+  "created_utc": "2026-10-18T09:50:28.142004+00:00",
+  "script_sha256": "c18f652de62f3eaf796c3edc0350b74aa949147ef9d53cdeb8188fe43f4a63db",
+  "python": "3.9.6",
+  "executable": "<VENV>/bin/python",
+  "versions": {
+    "torch": "2.0.1+cpu",
+    "transformers": "4.25.1",
+    "tokenizers": "0.13.3",
+    "sentencepiece": "0.2.2",
+    "onnx": "1.16.2",
+    "onnxruntime": "1.18.1",
+    "numpy": "1.26.4"
+  },
+  "opset": 17,
+  "do_constant_folding": true,
+  "weight_sha256": "31b78e3d3891072de8e2bf3553b71782242a1f3b589b914ec2b03feff7b14c54",
+  "maxrss_mib_after_load": 2123,
+  "graph": "encoder.onnx",
+  "bytes": 311965091,
+  "elapsed_s": 35.62,
+  "maxrss_mib": 4904
+}

@@ -1,0 +1,66 @@
+START parity 2026-10-18T09:53:07Z
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+PARITY {'file': 'cord_test_000.png', 'shape': [1, 1200, 1024], 'max_abs_diff': 0.0120086669921875, 'mean_abs_diff': 3.43378667634416e-06, 'ref_max_abs': 170.14630126953125, 'cosine_all': 0.9999999997591449, 'cosine_min_per_position': 0.9999998478162605}
+PARITY {'file': 'cord_test_001.png', 'shape': [1, 1200, 1024], 'max_abs_diff': 0.0006494522094726562, 'mean_abs_diff': 1.2040910310181138e-06, 'ref_max_abs': 171.11959838867188, 'cosine_all': 0.999999999996708, 'cosine_min_per_position': 0.999999995746825}
+PARITY {'file': 'cord_test_002.png', 'shape': [1, 1200, 1024], 'max_abs_diff': 0.003482818603515625, 'mean_abs_diff': 1.3382084887799312e-06, 'ref_max_abs': 185.11904907226562, 'cosine_all': 0.9999999999845505, 'cosine_min_per_position': 0.9999999527485266}
+PARITY {'file': 'cord_test_003.png', 'shape': [1, 1200, 1024], 'max_abs_diff': 0.0006866455078125, 'mean_abs_diff': 1.2583319196816472e-06, 'ref_max_abs': 165.11758422851562, 'cosine_all': 0.9999999999947392, 'cosine_min_per_position': 0.9999999675361315}
+PARITY {'file': 'cord_test_004.png', 'shape': [1, 1200, 1024], 'max_abs_diff': 0.0014472007751464844, 'mean_abs_diff': 1.2108269988194328e-06, 'ref_max_abs': 178.673828125, 'cosine_all': 0.9999999999959087, 'cosine_min_per_position': 0.9999999806899692}
+PARITY {'file': 'cord_test_005.png', 'shape': [1, 1200, 1024], 'max_abs_diff': 0.0029382705688476562, 'mean_abs_diff': 1.4808015223148156e-06, 'ref_max_abs': 164.01791381835938, 'cosine_all': 0.9999999999796235, 'cosine_min_per_position': 0.9999999297281369}
+PARITY {'file': 'cord_test_006.png', 'shape': [1, 1200, 1024], 'max_abs_diff': 0.000438690185546875, 'mean_abs_diff': 1.1554195314763167e-06, 'ref_max_abs': 184.0615234375, 'cosine_all': 0.9999999999973088, 'cosine_min_per_position': 0.9999999974972449}
+PARITY {'file': 'cord_test_007.png', 'shape': [1, 1200, 1024], 'max_abs_diff': 0.000812530517578125, 'mean_abs_diff': 1.2086580316624425e-06, 'ref_max_abs': 177.2612762451172, 'cosine_all': 0.9999999999966793, 'cosine_min_per_position': 0.9999999957250942}
+PARITY {'file': 'cord_test_008.png', 'shape': [1, 1200, 1024], 'max_abs_diff': 0.0007534027099609375, 'mean_abs_diff': 1.2027287323235215e-06, 'ref_max_abs': 188.48670959472656, 'cosine_all': 0.9999999999965684, 'cosine_min_per_position': 0.9999999957481576}
+PARITY {'file': 'cord_test_009.png', 'shape': [1, 1200, 1024], 'max_abs_diff': 0.000762939453125, 'mean_abs_diff': 1.1498266212347138e-06, 'ref_max_abs': 176.51797485351562, 'cosine_all': 0.9999999999971705, 'cosine_min_per_position': 0.9999999992797403}
+WROTE <WORK_DIR>/donut_official_encoder_bench_20261018T0953Z_c55034/encoder_parity.json
+START time torch round 0 2026-10-18T09:54:52Z load 3.60 2.44 1.95
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+TIME torch cord_test_000.png [5104, 4954, 5046]
+TIME torch cord_test_001.png [5103, 5062, 5083]
+TIME torch cord_test_002.png [4969, 5104, 4937]
+TIME torch cord_test_003.png [5074, 5107, 5116]
+TIME torch cord_test_004.png [5022, 5042, 5121]
+TIME torch cord_test_005.png [5081, 5076, 4955]
+TIME torch cord_test_006.png [5117, 4948, 4967]
+TIME torch cord_test_007.png [4980, 4984, 5072]
+TIME torch cord_test_008.png [5025, 5073, 5096]
+TIME torch cord_test_009.png [4997, 4962, 5089]
+WROTE <WORK_DIR>/donut_official_encoder_bench_20261018T0953Z_c55034/encoder_time_torch_round0.json
+START time ort round 0 2026-10-18T09:58:21Z load 3.56 3.00 2.28
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+TIME ort cord_test_000.png [4145, 4172, 4136]
+TIME ort cord_test_001.png [4153, 4149, 4155]
+TIME ort cord_test_002.png [4147, 4140, 4134]
+TIME ort cord_test_003.png [4137, 4144, 4148]
+TIME ort cord_test_004.png [4152, 4143, 4153]
+TIME ort cord_test_005.png [4140, 4148, 4143]
+TIME ort cord_test_006.png [4138, 4144, 4160]
+TIME ort cord_test_007.png [4150, 4153, 4139]
+TIME ort cord_test_008.png [4148, 4154, 4149]
+TIME ort cord_test_009.png [4144, 4151, 4167]
+WROTE <WORK_DIR>/donut_official_encoder_bench_20261018T0953Z_c55034/encoder_time_ort_round0.json
+START time torch round 1 2026-10-18T10:01:13Z load 4.96 3.55 2.60
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+TIME torch cord_test_000.png [5008, 4996, 4824]
+TIME torch cord_test_001.png [5001, 5022, 4792]
+TIME torch cord_test_002.png [4836, 5018, 4973]
+TIME torch cord_test_003.png [5006, 5016, 4934]
+TIME torch cord_test_004.png [4871, 5007, 4870]
+TIME torch cord_test_005.png [4826, 5051, 5022]
+TIME torch cord_test_006.png [5023, 4904, 5024]
+TIME torch cord_test_007.png [5047, 5038, 4845]
+TIME torch cord_test_008.png [4883, 5056, 5023]
+TIME torch cord_test_009.png [5021, 4900, 5036]
+WROTE <WORK_DIR>/donut_official_encoder_bench_20261018T0953Z_c55034/encoder_time_torch_round1.json
+START time ort round 1 2026-10-18T10:04:39Z load 3.35 3.49 2.77
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+TIME ort cord_test_000.png [4154, 4149, 4148]
+TIME ort cord_test_001.png [4148, 4166, 4145]
+TIME ort cord_test_002.png [4125, 4155, 4145]
+TIME ort cord_test_003.png [4140, 4153, 4152]
+TIME ort cord_test_004.png [4147, 4149, 4148]
+TIME ort cord_test_005.png [4171, 4150, 4159]
+TIME ort cord_test_006.png [4144, 4154, 4154]
+TIME ort cord_test_007.png [4143, 4148, 4146]
+TIME ort cord_test_008.png [4147, 4147, 4154]
+TIME ort cord_test_009.png [4149, 4155, 4156]
+WROTE <WORK_DIR>/donut_official_encoder_bench_20261018T0953Z_c55034/encoder_time_ort_round1.json
+ALL_DONE 2026-10-18T10:07:31Z

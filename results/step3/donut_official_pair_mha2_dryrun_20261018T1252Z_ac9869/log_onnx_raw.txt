@@ -1,0 +1,7 @@
+START onnx_raw 2026-10-18T12:53:11Z load 1.15 0.82 0.61
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+IMG onnx_raw cord_test_000.png 5257ms gen 53 enc 4123ms maxrss_MiB 4223
+IMG onnx_raw cord_test_001.png 5266ms gen 50 enc 4097ms maxrss_MiB 4227
+IMG onnx_raw cord_test_002.png 5547ms gen 60 enc 4146ms maxrss_MiB 4227
+DONE onnx_raw records 3 skipped 0 maxrss_kib 4329336
+EXIT onnx_raw rc=0 killed=0 peak_anon=4437135360 2026-10-18T12:53:41Z

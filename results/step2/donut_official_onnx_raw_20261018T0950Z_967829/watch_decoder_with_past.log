@@ -1,0 +1,16 @@
+START decoder_with_past 2026-10-18T09:51:50Z load 2.56 1.80 1.69
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+<VENV>/lib/python3.9/site-packages/transformers/models/mbart/modeling_mbart.py:912: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if input_shape[-1] > 1:
+<VENV>/lib/python3.9/site-packages/transformers/models/mbart/modeling_mbart.py:239: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if attn_weights.size() != (bsz * self.num_heads, tgt_len, src_len):
+<VENV>/lib/python3.9/site-packages/transformers/models/mbart/modeling_mbart.py:246: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if attention_mask.size() != (bsz, 1, tgt_len, src_len):
+<VENV>/lib/python3.9/site-packages/transformers/models/mbart/modeling_mbart.py:278: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if attn_output.size() != (bsz * self.num_heads, tgt_len, self.head_dim):
+============== Diagnostic Run torch.onnx.export version 2.0.1+cpu ==============
+verbose: False, log level: Level.ERROR
+======================= 0 NONE 0 NOTE 0 WARNING 0 ERROR ========================
+
+EXPORTED decoder_with_past.onnx {'bytes': 710175221, 'elapsed_s': 12.18, 'maxrss_mib': 3538}
+EXIT decoder_with_past rc=0 killed=0 peak_anon=3487887360 2026-10-18T09:52:08Z

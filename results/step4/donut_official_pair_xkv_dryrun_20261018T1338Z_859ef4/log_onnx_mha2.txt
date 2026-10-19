@@ -1,0 +1,7 @@
+START onnx_mha2 2026-10-18T13:38:46Z load 1.46 0.84 0.90
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+IMG onnx_mha2 cord_test_000.png 5164ms gen 53 enc 4138ms maxrss_MiB 4237
+IMG onnx_mha2 cord_test_001.png 5092ms gen 50 enc 4129ms maxrss_MiB 4242
+IMG onnx_mha2 cord_test_002.png 5288ms gen 60 enc 4135ms maxrss_MiB 4242
+DONE onnx_mha2 records 3 skipped 0 maxrss_kib 4344328
+EXIT onnx_mha2 rc=0 killed=0 peak_anon=4455002112 2026-10-18T13:39:16Z

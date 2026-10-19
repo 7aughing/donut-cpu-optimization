@@ -1,0 +1,7 @@
+START check 2026-10-18T09:52:08Z load 2.75 1.90 1.73
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+CHECKED encoder.onnx {'bytes': 311965091, 'n_nodes': 15999, 'ort_load_s': 2.39}
+CHECKED decoder.onnx {'bytes': 743776030, 'n_nodes': 877, 'ort_load_s': 1.04}
+CHECKED decoder_with_past.onnx {'bytes': 710175221, 'n_nodes': 817, 'ort_load_s': 1.15}
+DONE check maxrss_mib 2605
+EXIT check rc=0 killed=0 peak_anon=2605273088 2026-10-18T09:52:26Z

@@ -1,0 +1,129 @@
+{
+  "src": "<WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/bundle",
+  "dst": "<WORK_DIR>/donut_official_onnx_mha2_xkv_20261018T1337Z_1ad308/bundle",
+  "script_sha256": "159a1e6062a8836294a5dd9726838952f26236ad9bb83fd7b88bd510e38ce0a1",
+  "checks": {
+    "4_copies_identical": true,
+    "1_nodes_identical_except_mha_outputs": true,
+    "2_initializers_identical": true,
+    "3_opsets_and_inputs_identical": true,
+    "5_ort_loads_9_outputs": true,
+    "6_src_unchanged": true
+  },
+  "src_sha256": {
+    "encoder.onnx": "fa5c2951233a063e3ffc498dfc1c21661757ba7df1ed0ee093e27d6d9768169b",
+    "decoder.onnx": "faa65092ca096c896628f72fb65ef0176fd09bc8d06503222f204b310b8deaec",
+    "decoder_with_past.onnx": "8a2e889b90d978a64a12407e70cc5584a08723ddcf5fb8ee4022b585e106362f"
+  },
+  "changed_mha": [
+    [
+      "Attention_0",
+      [
+        "present_0_cross_k",
+        "present_0_cross_v"
+      ]
+    ],
+    [
+      "Attention_1",
+      [
+        "present_1_cross_k",
+        "present_1_cross_v"
+      ]
+    ],
+    [
+      "Attention_2",
+      [
+        "present_2_cross_k",
+        "present_2_cross_v"
+      ]
+    ],
+    [
+      "Attention_3",
+      [
+        "present_3_cross_k",
+        "present_3_cross_v"
+      ]
+    ]
+  ],
+  "dst_sha256": {
+    "encoder.onnx": "fa5c2951233a063e3ffc498dfc1c21661757ba7df1ed0ee093e27d6d9768169b",
+    "decoder.onnx": "faa65092ca096c896628f72fb65ef0176fd09bc8d06503222f204b310b8deaec",
+    "decoder_with_past.onnx": "9ab523bbbd272378cdff192c2dc1081d8519c32d7adecee3595486a576cdaa5e"
+  },
+  "node_count": 245,
+  "initializer_count": 116,
+  "graph_inputs": 18,
+  "ort_version": "1.18.1",
+  "ort_outputs": [
+    "logits",
+    "present_0_self_k",
+    "present_0_self_v",
+    "present_1_self_k",
+    "present_1_self_v",
+    "present_2_self_k",
+    "present_2_self_v",
+    "present_3_self_k",
+    "present_3_self_v"
+  ],
+  "ort_inputs": 18,
+  "ort_optimized_node_count": 241,
+  "ort_optimized_ops": {
+    "Reshape": 40,
+    "MatMul": 37,
+    "Concat": 30,
+    "Unsqueeze": 20,
+    "Add": 19,
+    "Gather": 18,
+    "Transpose": 16,
+    "SkipLayerNormalization": 12,
+    "Shape": 11,
+    "Mul": 9,
+    "FusedMatMul": 4,
+    "Softmax": 4,
+    "MultiHeadAttention": 4,
+    "BiasGelu": 4,
+    "Where": 3,
+    "Equal": 2,
+    "Expand": 2,
+    "LayerNormalization": 2,
+    "Cast": 2,
+    "Range": 1,
+    "Sub": 1
+  },
+  "ort_optimized_mha_outputs": [
+    [
+      "/bart_decoder/layers.0/encoder_attn/Reshape_5_output_0",
+      "",
+      ""
+    ],
+    [
+      "/bart_decoder/layers.1/encoder_attn/Reshape_5_output_0",
+      "",
+      ""
+    ],
+    [
+      "/bart_decoder/layers.2/encoder_attn/Reshape_5_output_0",
+      "",
+      ""
+    ],
+    [
+      "/bart_decoder/layers.3/encoder_attn/Reshape_5_output_0",
+      "",
+      ""
+    ]
+  ],
+  "graphs": {
+    "encoder.onnx": {
+      "bytes": 311965091,
+      "sha256": "fa5c2951233a063e3ffc498dfc1c21661757ba7df1ed0ee093e27d6d9768169b"
+    },
+    "decoder.onnx": {
+      "bytes": 743776030,
+      "sha256": "faa65092ca096c896628f72fb65ef0176fd09bc8d06503222f204b310b8deaec"
+    },
+    "decoder_with_past.onnx": {
+      "bytes": 710123241,
+      "sha256": "9ab523bbbd272378cdff192c2dc1081d8519c32d7adecee3595486a576cdaa5e"
+    }
+  }
+}

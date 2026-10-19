@@ -1,0 +1,185 @@
+{
+  "created_utc": "2026-10-18T10:01:16.985936+00:00",
+  "mode": "time",
+  "backend": "torch",
+  "round": 1,
+  "hostname": "<pod>",
+  "executable": "<VENV>/bin/python",
+  "versions": {
+    "torch": "2.0.1+cpu",
+    "transformers": "4.25.1",
+    "onnxruntime": "1.18.1",
+    "numpy": "1.26.4"
+  },
+  "torch_intra_threads": 2,
+  "ort_intra": 2,
+  "ort_inter": 1,
+  "load_avg_start": [
+    4.64,
+    3.51,
+    2.59
+  ],
+  "script_sha256": "33c9b60075b34784f6b5de2efa66fa92975e1482ef4305931f144e6b0b3b6a2c",
+  "n_images": 10,
+  "repeats": 3,
+  "load_s": 3.841,
+  "results": [
+    {
+      "file": "cord_test_000.png",
+      "repeat": 0,
+      "ms": 5008.288290351629
+    },
+    {
+      "file": "cord_test_000.png",
+      "repeat": 1,
+      "ms": 4996.398139744997
+    },
+    {
+      "file": "cord_test_000.png",
+      "repeat": 2,
+      "ms": 4824.291914701462
+    },
+    {
+      "file": "cord_test_001.png",
+      "repeat": 0,
+      "ms": 5000.978212803602
+    },
+    {
+      "file": "cord_test_001.png",
+      "repeat": 1,
+      "ms": 5022.087596356869
+    },
+    {
+      "file": "cord_test_001.png",
+      "repeat": 2,
+      "ms": 4792.133592069149
+    },
+    {
+      "file": "cord_test_002.png",
+      "repeat": 0,
+      "ms": 4835.72967723012
+    },
+    {
+      "file": "cord_test_002.png",
+      "repeat": 1,
+      "ms": 5018.050167709589
+    },
+    {
+      "file": "cord_test_002.png",
+      "repeat": 2,
+      "ms": 4972.599804401398
+    },
+    {
+      "file": "cord_test_003.png",
+      "repeat": 0,
+      "ms": 5005.809310823679
+    },
+    {
+      "file": "cord_test_003.png",
+      "repeat": 1,
+      "ms": 5015.636060386896
+    },
+    {
+      "file": "cord_test_003.png",
+      "repeat": 2,
+      "ms": 4933.500409126282
+    },
+    {
+      "file": "cord_test_004.png",
+      "repeat": 0,
+      "ms": 4870.888151228428
+    },
+    {
+      "file": "cord_test_004.png",
+      "repeat": 1,
+      "ms": 5007.16445222497
+    },
+    {
+      "file": "cord_test_004.png",
+      "repeat": 2,
+      "ms": 4869.539279490709
+    },
+    {
+      "file": "cord_test_005.png",
+      "repeat": 0,
+      "ms": 4826.320890337229
+    },
+    {
+      "file": "cord_test_005.png",
+      "repeat": 1,
+      "ms": 5051.275204867125
+    },
+    {
+      "file": "cord_test_005.png",
+      "repeat": 2,
+      "ms": 5022.19881862402
+    },
+    {
+      "file": "cord_test_006.png",
+      "repeat": 0,
+      "ms": 5023.0024345219135
+    },
+    {
+      "file": "cord_test_006.png",
+      "repeat": 1,
+      "ms": 4904.4687487185
+    },
+    {
+      "file": "cord_test_006.png",
+      "repeat": 2,
+      "ms": 5024.005256593227
+    },
+    {
+      "file": "cord_test_007.png",
+      "repeat": 0,
+      "ms": 5047.308526933193
+    },
+    {
+      "file": "cord_test_007.png",
+      "repeat": 1,
+      "ms": 5037.576254457235
+    },
+    {
+      "file": "cord_test_007.png",
+      "repeat": 2,
+      "ms": 4844.541199505329
+    },
+    {
+      "file": "cord_test_008.png",
+      "repeat": 0,
+      "ms": 4883.39414820075
+    },
+    {
+      "file": "cord_test_008.png",
+      "repeat": 1,
+      "ms": 5055.572118610144
+    },
+    {
+      "file": "cord_test_008.png",
+      "repeat": 2,
+      "ms": 5022.746060043573
+    },
+    {
+      "file": "cord_test_009.png",
+      "repeat": 0,
+      "ms": 5021.164666861296
+    },
+    {
+      "file": "cord_test_009.png",
+      "repeat": 1,
+      "ms": 4899.540863931179
+    },
+    {
+      "file": "cord_test_009.png",
+      "repeat": 2,
+      "ms": 5035.747930407524
+    }
+  ],
+  "load_avg_end": [
+    3.35,
+    3.49,
+    2.77
+  ],
+  "process_maxrss_kib": 2312780,
+  "finished_utc": "2026-10-18T10:04:38.681764+00:00"
+}

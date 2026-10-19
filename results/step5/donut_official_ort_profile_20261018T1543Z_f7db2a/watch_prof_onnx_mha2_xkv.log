@@ -1,0 +1,20 @@
+START prof_onnx_mha2_xkv 2026-10-18T15:44:18Z load 2.03 1.15 0.94
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+A cord_test_000.png {'total_ms': 4938.4, 'enc_run_ms': 4128.1, 'dec_p_run_ms': 587.1, 'loop_python_ms': 6.1} steps 53
+A cord_test_001.png {'total_ms': 4896.2, 'enc_run_ms': 4137.5, 'dec_p_run_ms': 555.0, 'loop_python_ms': 5.9} steps 50
+A cord_test_002.png {'total_ms': 5023.8, 'enc_run_ms': 4125.6, 'dec_p_run_ms': 670.0, 'loop_python_ms': 7.1} steps 60
+B cord_test_000.png {'total_ms': 5118.2, 'enc_run_ms': 4195.5, 'dec_p_run_ms': 703.2}
+B cord_test_001.png {'total_ms': 5052.6, 'enc_run_ms': 4192.1, 'dec_p_run_ms': 661.2}
+B cord_test_002.png {'total_ms': 5199.8, 'enc_run_ms': 4135.6, 'dec_p_run_ms': 833.0}
+A_SUM_MS {'total_ms': 14858.5, 'preprocess_ms': 121.9, 'enc_run_ms': 12391.2, 'dec_run_ms': 368.9, 'dec_p_run_ms': 1812.1, 'loop_python_ms': 19.1, 'post_loop_ms': 16.8, 'head_ms': 2.3, 'parse_ms': 126.4, 'decode_steps': 163, 'seq_len': 166}
+A_SHARE preprocess_ms 0.8%
+A_SHARE enc_run_ms 83.4%
+A_SHARE dec_run_ms 2.5%
+A_SHARE dec_p_run_ms 12.2%
+A_SHARE loop_python_ms 0.1%
+A_SHARE post_loop_ms 0.1%
+A_SHARE head_ms 0.0%
+A_SHARE parse_ms 0.9%
+B_SEQ_SAME 3/3 MEASURED_RUNS {'enc': 3, 'dec': 3, 'dec_p': 160}
+PROFILE_DONE <WORK_DIR>/donut_official_ort_profile_20261018T1543Z_f7db2a/onnx_mha2_xkv
+EXIT prof_onnx_mha2_xkv rc=0 killed=0 peak_anon=4658368512 2026-10-18T15:45:17Z

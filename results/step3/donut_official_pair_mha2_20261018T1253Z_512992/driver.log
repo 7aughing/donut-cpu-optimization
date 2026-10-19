@@ -1,0 +1,18 @@
+START 2026-10-18T12:53:49Z OUT=<WORK_DIR>/donut_official_pair_mha2_20261018T1253Z_512992 A=onnx_raw:<WORK_DIR>/donut_official_onnx_raw_20261018T0950Z_967829/bundle B=onnx_mha2:<WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/bundle
+RUN round=0 pos=0 backend=onnx_raw slice=0-25 2026-10-18T12:53:49Z load 1.43 0.94 0.66
+DONE onnx_raw records 25 skipped 0 maxrss_kib 4370008
+RUN round=0 pos=1 backend=onnx_mha2 slice=0-25 2026-10-18T12:56:21Z load 2.51 1.56 0.93
+DONE onnx_mha2 records 25 skipped 0 maxrss_kib 4395452
+RUN round=1 pos=0 backend=onnx_mha2 slice=25-50 2026-10-18T12:58:51Z load 2.54 1.94 1.17
+DONE onnx_mha2 records 25 skipped 25 maxrss_kib 4428804
+RUN round=1 pos=1 backend=onnx_raw slice=25-50 2026-10-18T13:01:24Z load 2.41 2.13 1.37
+DONE onnx_raw records 25 skipped 25 maxrss_kib 4439428
+RUN round=2 pos=0 backend=onnx_raw slice=50-75 2026-10-18T13:04:00Z load 2.72 2.36 1.58
+DONE onnx_raw records 25 skipped 50 maxrss_kib 4451092
+RUN round=2 pos=1 backend=onnx_mha2 slice=50-75 2026-10-18T13:06:35Z load 2.17 2.27 1.67
+DONE onnx_mha2 records 25 skipped 50 maxrss_kib 4452640
+RUN round=3 pos=0 backend=onnx_mha2 slice=75-100 2026-10-18T13:09:07Z load 2.91 2.52 1.86
+DONE onnx_mha2 records 25 skipped 75 maxrss_kib 4434092
+RUN round=3 pos=1 backend=onnx_raw slice=75-100 2026-10-18T13:11:41Z load 2.43 2.48 1.95
+DONE onnx_raw records 25 skipped 75 maxrss_kib 4440168
+END 2026-10-18T13:14:18Z

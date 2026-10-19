@@ -1,0 +1,15 @@
+# Local OS and Python files
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local credentials and downloaded/generated model assets
+.env
+.env.*
+*.onnx
+*.onnx.data
+*.bin
+*.safetensors
+/donut_official_assets/

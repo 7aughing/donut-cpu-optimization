@@ -1,0 +1,197 @@
+{
+  "created_utc": "2026-10-18T15:44:14.408427+00:00",
+  "backend": "onnx_mha2",
+  "bundle_dir": "<WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/bundle",
+  "graph_sha256": {
+    "encoder.onnx": "fa5c2951233a063e3ffc498dfc1c21661757ba7df1ed0ee093e27d6d9768169b",
+    "decoder.onnx": "faa65092ca096c896628f72fb65ef0176fd09bc8d06503222f204b310b8deaec",
+    "decoder_with_past.onnx": "8a2e889b90d978a64a12407e70cc5584a08723ddcf5fb8ee4022b585e106362f"
+  },
+  "runner_sha256": "bf7e992b87bc15bbf489cbbf1eae35ed4b14721d524127bac8507c954a97e116",
+  "script_sha256": "342b7eace9ece864383061998c4433c97f1163e3136f44ae27a34201f7f6075d",
+  "images": [
+    "cord_test_000.png",
+    "cord_test_001.png",
+    "cord_test_002.png"
+  ],
+  "versions": {
+    "onnxruntime": "1.18.1",
+    "torch": "2.0.1+cpu"
+  },
+  "threads": {
+    "torch_intra": 2,
+    "ort_intra": 2,
+    "ort_inter": 1
+  },
+  "cpu_quota": "400000 100000",
+  "dec_p_emits_cross_kv": true,
+  "pass_a_median": {
+    "total_ms": 5221.84370085597,
+    "preprocess_ms": 40.294963866472244,
+    "enc_run_ms": 4124.396458268166,
+    "dec_run_ms": 117.76098981499672,
+    "dec_p_run_ms": 896.8309834599495,
+    "loop_python_ms": 8.02774727344513,
+    "post_loop_ms": 8.141439408063889,
+    "head_ms": 0.745777040719986,
+    "parse_ms": 43.13576593995094,
+    "decode_steps": 53,
+    "seq_len": 54
+  },
+  "pass_a_sum": {
+    "total_ms": 15611.864674836397,
+    "preprocess_ms": 107.57483541965485,
+    "enc_run_ms": 12353.63269969821,
+    "dec_run_ms": 353.9183996617794,
+    "dec_p_run_ms": 2618.7385246157646,
+    "loop_python_ms": 23.483555763959885,
+    "post_loop_ms": 25.130003690719604,
+    "head_ms": 2.2489652037620544,
+    "parse_ms": 127.137690782547,
+    "decode_steps": 163,
+    "seq_len": 166
+  },
+  "pass_b_median": {
+    "total_ms": 5373.425263911486,
+    "preprocess_ms": 40.50495848059654,
+    "enc_run_ms": 4185.6830306351185,
+    "dec_run_ms": 123.1054961681366,
+    "dec_p_run_ms": 911.0022187232971,
+    "loop_python_ms": 8.051853626966476,
+    "post_loop_ms": 7.5039342045784,
+    "head_ms": 0.713001936674118,
+    "parse_ms": 43.10158267617226,
+    "decode_steps": 53,
+    "seq_len": 54
+  },
+  "pass_b_sequences_same_as_a": "3/3",
+  "warmup_runs": {
+    "enc": 1,
+    "dec": 1,
+    "dec_p": 52
+  },
+  "measured_runs": {
+    "enc": 3,
+    "dec": 3,
+    "dec_p": 160
+  },
+  "profile_files": {
+    "enc": "<WORK_DIR>/donut_official_ort_profile_20261018T1543Z_f7db2a/onnx_mha2/prof_enc_2026-10-18_15-43-47.json",
+    "dec": "<WORK_DIR>/donut_official_ort_profile_20261018T1543Z_f7db2a/onnx_mha2/prof_dec_2026-10-18_15-43-50.json",
+    "dec_p": "<WORK_DIR>/donut_official_ort_profile_20261018T1543Z_f7db2a/onnx_mha2/prof_dec_p_2026-10-18_15-43-51.json"
+  },
+  "rows_a": [
+    {
+      "total_ms": 5128.688056021929,
+      "preprocess_ms": 40.294963866472244,
+      "parse_ms": 40.48503562808037,
+      "forward_ms": 5047.908056527376,
+      "enc_run_ms": 4095.8863385021687,
+      "dec_run_ms": 118.6206303536892,
+      "dec_p_run_ms": 817.4269050359726,
+      "dec_runs": 1,
+      "dec_p_runs": 52,
+      "enc_runs": 1,
+      "head_ms": 0.7700137794017792,
+      "post_loop_ms": 7.880993187427521,
+      "seq_len": 54,
+      "loop_python_ms": 7.323175668716431,
+      "decode_steps": 53,
+      "file": "cord_test_000.png"
+    },
+    {
+      "total_ms": 5221.84370085597,
+      "preprocess_ms": 22.81714230775833,
+      "parse_ms": 43.13576593995094,
+      "forward_ms": 5155.890792608261,
+      "enc_run_ms": 4124.396458268166,
+      "dec_run_ms": 117.76098981499672,
+      "dec_p_run_ms": 896.8309834599495,
+      "dec_runs": 1,
+      "dec_p_runs": 49,
+      "enc_runs": 1,
+      "head_ms": 0.7331743836402893,
+      "post_loop_ms": 8.141439408063889,
+      "seq_len": 51,
+      "loop_python_ms": 8.02774727344513,
+      "decode_steps": 50,
+      "file": "cord_test_001.png"
+    },
+    {
+      "total_ms": 5261.332917958498,
+      "preprocess_ms": 44.46272924542427,
+      "parse_ms": 43.516889214515686,
+      "forward_ms": 5173.353299498558,
+      "enc_run_ms": 4133.3499029278755,
+      "dec_run_ms": 117.53677949309349,
+      "dec_p_run_ms": 904.4806361198425,
+      "dec_runs": 1,
+      "dec_p_runs": 59,
+      "enc_runs": 1,
+      "head_ms": 0.745777040719986,
+      "post_loop_ms": 9.107571095228195,
+      "seq_len": 61,
+      "loop_python_ms": 8.132632821798325,
+      "decode_steps": 60,
+      "file": "cord_test_002.png"
+    }
+  ],
+  "rows_b": [
+    {
+      "total_ms": 5373.425263911486,
+      "preprocess_ms": 40.50495848059654,
+      "parse_ms": 43.10158267617226,
+      "forward_ms": 5289.818722754717,
+      "enc_run_ms": 4219.759315252304,
+      "dec_run_ms": 142.66811683773994,
+      "dec_p_run_ms": 911.0022187232971,
+      "dec_runs": 1,
+      "dec_p_runs": 52,
+      "enc_runs": 1,
+      "head_ms": 0.64903125166893,
+      "post_loop_ms": 7.6995305716991425,
+      "seq_len": 54,
+      "loop_python_ms": 8.04051011800766,
+      "decode_steps": 53,
+      "file": "cord_test_000.png"
+    },
+    {
+      "total_ms": 5229.31369766593,
+      "preprocess_ms": 29.000569134950638,
+      "parse_ms": 49.89978298544884,
+      "forward_ms": 5150.41334554553,
+      "enc_run_ms": 4172.685764729977,
+      "dec_run_ms": 121.10751867294312,
+      "dec_p_run_ms": 840.3512723743916,
+      "dec_runs": 1,
+      "dec_p_runs": 49,
+      "enc_runs": 1,
+      "head_ms": 0.713001936674118,
+      "post_loop_ms": 7.5039342045784,
+      "seq_len": 51,
+      "loop_python_ms": 8.051853626966476,
+      "decode_steps": 50,
+      "file": "cord_test_001.png"
+    },
+    {
+      "total_ms": 5476.008504629135,
+      "preprocess_ms": 53.631387650966644,
+      "parse_ms": 42.55818575620651,
+      "forward_ms": 5379.818931221962,
+      "enc_run_ms": 4185.6830306351185,
+      "dec_run_ms": 123.1054961681366,
+      "dec_p_run_ms": 1055.3173460066319,
+      "dec_runs": 1,
+      "dec_p_runs": 59,
+      "enc_runs": 1,
+      "head_ms": 0.8442811667919159,
+      "post_loop_ms": 5.99081814289093,
+      "seq_len": 61,
+      "loop_python_ms": 8.877959102392197,
+      "decode_steps": 60,
+      "file": "cord_test_002.png"
+    }
+  ],
+  "maxrss_kib_after_pass_a": 4338424,
+  "process_maxrss_kib": 4614728
+}

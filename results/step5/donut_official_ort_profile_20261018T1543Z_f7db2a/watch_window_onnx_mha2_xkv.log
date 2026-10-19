@@ -1,0 +1,85 @@
+START window_onnx_mha2_xkv 2026-10-18T15:45:17Z load 2.88 1.56 1.10
+== enc complete=True measured=3/3 full=3 kernels/run={5544: 3}
+   run 4173936 us/call  kernel 4140463  non-kernel 33473 (0.8%)
+   MatMul                            3102117.0 us   74.3%
+   Transpose                          176352.0 us    4.2%
+   BiasGelu                           141877.3 us    3.4%
+   Add                                140857.3 us    3.4%
+   LayerNormalization                 139538.7 us    3.3%
+   FusedMatMul                        116901.0 us    2.8%
+   Slice                               88466.0 us    2.1%
+   Softmax                             87795.3 us    2.1%
+   Concat                              41089.0 us    1.0%
+   Pad                                 39270.3 us    0.9%
+   Where                               34594.0 us    0.8%
+   Conv                                 4928.3 us    0.1%
+   ReorderOutput                        3825.3 us    0.1%
+   Not                                  3701.0 us    0.1%
+   groups {'compute_ops': '90.6%', 'shape_ops': '8.6%'}
+   stages {'layers.0': '15.4%', 'layers.1': '11.3%', 'layers.2': '60.2%', 'layers.3': '8.3%', 'other': '4.0%'}
+   top 1016728.0 us  24.4%  MatMul  /encoder/encoder/layers.N/blocks.N/output/dense/MatMul
+   top  936880.3 us  22.4%  MatMul  /encoder/encoder/layers.N/blocks.N/intermediate/dense/MatMul
+   top  245859.3 us   5.9%  MatMul  /encoder/encoder/layers.N/blocks.N/attention/self/query/MatMul
+   top  242773.7 us   5.8%  MatMul  /encoder/encoder/layers.N/blocks.N/attention/self/key/MatMul
+   top  239109.0 us   5.7%  MatMul  /encoder/encoder/layers.N/blocks.N/attention/self/value/MatMul
+   top  230409.3 us   5.5%  MatMul  /encoder/encoder/layers.N/blocks.N/attention/output/dense/MatMul
+   top  116901.0 us   2.8%  FusedMatMul  /encoder/encoder/layers.N/blocks.N/attention/self/MatMul/MatMulScaleFusion/
+   top  114357.0 us   2.7%  MatMul  /encoder/encoder/layers.N/blocks.N/attention/self/MatMul_1
+   top   98665.3 us   2.4%  Transpose  /encoder/encoder/layers.N/blocks.N/attention/self/Transpose_2
+   top   87795.3 us   2.1%  Softmax  /encoder/encoder/layers.N/blocks.N/attention/self/Softmax
+== dec complete=True measured=3/3 full=3 kernels/run={391: 3}
+   run 119889 us/call  kernel 117141  non-kernel 2748 (2.3%)
+   MatMul                             106909.3 us   89.2%
+   MatMul(lm_head)                      5118.0 us    4.3%
+   Transpose                            2180.3 us    1.8%
+   Add                                  1285.7 us    1.1%
+   FusedMatMul                           386.3 us    0.3%
+   Reshape                               318.7 us    0.3%
+   Concat                                237.7 us    0.2%
+   LayerNormalization                    133.7 us    0.1%
+   Unsqueeze                             116.0 us    0.1%
+   Gather                                110.3 us    0.1%
+   Mul                                    84.0 us    0.1%
+   Softmax                                76.3 us    0.1%
+   BiasGelu                               64.7 us    0.1%
+   Shape                                  55.7 us    0.0%
+   groups {'shape_ops': '2.6%', 'compute_ops': '95.1%'}
+   top   50704.7 us  42.3%  MatMul  /bart_decoder/layers.N/encoder_attn/k_proj/MatMul
+   top   50470.7 us  42.1%  MatMul  /bart_decoder/layers.N/encoder_attn/v_proj/MatMul
+   top    5118.0 us   4.3%  MatMul(lm_head)  /lm_head/MatMul
+   top    1502.0 us   1.3%  MatMul  /bart_decoder/layers.N/fc2/MatMul
+   top    1479.0 us   1.2%  MatMul  /bart_decoder/layers.N/fc1/MatMul
+   top    1042.7 us   0.9%  Transpose  /bart_decoder/layers.N/encoder_attn/Transpose_1
+   top    1030.3 us   0.9%  Transpose  /bart_decoder/layers.N/encoder_attn/Transpose
+   top     525.7 us   0.4%  Add  /bart_decoder/layers.N/encoder_attn/k_proj/Add
+   top     483.3 us   0.4%  Add  /bart_decoder/layers.N/encoder_attn/v_proj/Add
+   top     414.0 us   0.3%  MatMul  /bart_decoder/layers.N/self_attn/k_proj/MatMul
+== dec_p complete=True measured=160/160 full=160 kernels/run={241: 160}
+   run 13578 us/call  kernel 12060  non-kernel 1517 (11.2%)
+   MatMul                               4812.9 us   35.4%
+   MatMul(lm_head)                      4441.0 us   32.7%
+   MultiHeadAttention                   1662.1 us   12.2%
+   Concat                                254.3 us    1.9%
+   SkipLayerNormalization                142.7 us    1.1%
+   Reshape                               139.3 us    1.0%
+   Add                                   103.9 us    0.8%
+   BiasGelu                               98.8 us    0.7%
+   Gather                                 72.7 us    0.5%
+   Unsqueeze                              66.0 us    0.5%
+   Transpose                              57.8 us    0.4%
+   FusedMatMul                            50.4 us    0.4%
+   Mul                                    40.6 us    0.3%
+   Shape                                  33.1 us    0.2%
+   groups {'shape_ops': '5.0%', 'compute_ops': '83.8%'}
+   top    4441.0 us  32.7%  MatMul(lm_head)  /lm_head/MatMul
+   top    1322.5 us   9.7%  MatMul  /bart_decoder/layers.N/fc2/MatMul
+   top    1319.8 us   9.7%  MatMul  /bart_decoder/layers.N/fc1/MatMul
+   top     423.6 us   3.1%  MultiHeadAttention  Attention_0
+   top     416.1 us   3.1%  MultiHeadAttention  Attention_1
+   top     412.7 us   3.0%  MultiHeadAttention  Attention_3
+   top     409.6 us   3.0%  MultiHeadAttention  Attention_2
+   top     357.0 us   2.6%  MatMul  /bart_decoder/layers.N/encoder_attn/out_proj/MatMul
+   top     356.4 us   2.6%  MatMul  /bart_decoder/layers.N/self_attn/v_proj/MatMul
+   top     353.8 us   2.6%  MatMul  /bart_decoder/layers.N/encoder_attn/q_proj/MatMul
+ALL_COMPLETE True
+EXIT window_onnx_mha2_xkv rc=0 killed=0 peak_anon=498753536 2026-10-18T15:45:19Z

@@ -1,0 +1,24 @@
+START encoder 2026-10-18T09:50:26Z load 1.39 1.45 1.58
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:230: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if num_channels != self.num_channels:
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:220: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if width % self.patch_size[1] != 0:
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:223: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if height % self.patch_size[0] != 0:
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:535: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if min(input_resolution) <= self.window_size:
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:621: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  was_padded = pad_values[3] > 0 or pad_values[5] > 0
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:622: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if was_padded:
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:266: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  should_pad = (height % 2 == 1) or (width % 2 == 1)
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:267: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if should_pad:
+============== Diagnostic Run torch.onnx.export version 2.0.1+cpu ==============
+verbose: False, log level: Level.ERROR
+======================= 0 NONE 0 NOTE 0 WARNING 0 ERROR ========================
+
+EXPORTED encoder.onnx {'bytes': 311965091, 'elapsed_s': 35.62, 'maxrss_mib': 4904}
+EXIT encoder rc=0 killed=0 peak_anon=5254696960 2026-10-18T09:51:08Z

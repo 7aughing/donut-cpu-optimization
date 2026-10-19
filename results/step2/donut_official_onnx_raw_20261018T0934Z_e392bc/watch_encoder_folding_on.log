@@ -1,0 +1,21 @@
+START encoder 2026-10-18T09:34:36Z load 1.46 1.69 1.75
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:230: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if num_channels != self.num_channels:
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:220: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if width % self.patch_size[1] != 0:
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:223: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if height % self.patch_size[0] != 0:
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:535: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if min(input_resolution) <= self.window_size:
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:621: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  was_padded = pad_values[3] > 0 or pad_values[5] > 0
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:622: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if was_padded:
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:266: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  should_pad = (height % 2 == 1) or (width % 2 == 1)
+<VENV>/lib/python3.9/site-packages/transformers/models/donut/modeling_donut_swin.py:267: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if should_pad:
+WATCHDOG_KILL anon=7623204864 2026-10-18T09:34:51Z
+<WORK_DIR>/donut_official_assets/scripts/donut_export_watch.sh: line 30:  2201 Killed                  "$PY" -I "$A/scripts/donut_onnx_export.py" --only "$ONLY" --model-dir "$A/model" --manifest "$A/cord_v2/test/manifest.json" --out "$OUT" --extra-path "$A/pylib_sentencepiece" "$@"
+EXIT encoder rc=137 killed=1 peak_anon=7623204864 2026-10-18T09:34:51Z

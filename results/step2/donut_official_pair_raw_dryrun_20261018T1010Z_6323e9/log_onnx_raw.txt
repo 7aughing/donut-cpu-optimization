@@ -1,0 +1,5 @@
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+IMG onnx_raw cord_test_000.png 5221ms gen 53 enc 4144ms maxrss_MiB 4251
+IMG onnx_raw cord_test_001.png 5145ms gen 50 enc 4140ms maxrss_MiB 4256
+IMG onnx_raw cord_test_002.png 5346ms gen 60 enc 4156ms maxrss_MiB 4256
+DONE onnx_raw records 3 skipped 0 maxrss_kib 4358264

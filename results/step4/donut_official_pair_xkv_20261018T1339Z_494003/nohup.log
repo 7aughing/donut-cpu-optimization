@@ -1,0 +1,18 @@
+START 2026-10-18T13:39:28Z OUT=<WORK_DIR>/donut_official_pair_xkv_20261018T1339Z_494003 A=onnx_mha2:<WORK_DIR>/donut_official_onnx_mha2_20261018T1250Z_26c1ed/bundle B=onnx_mha2_xkv:<WORK_DIR>/donut_official_onnx_mha2_xkv_20261018T1337Z_1ad308/bundle
+RUN round=0 pos=0 backend=onnx_mha2 slice=0-25 2026-10-18T13:39:28Z load 1.66 0.97 0.94
+DONE onnx_mha2 records 25 skipped 0 maxrss_kib 4366344
+RUN round=0 pos=1 backend=onnx_mha2_xkv slice=0-25 2026-10-18T13:41:56Z load 2.50 1.56 1.17
+DONE onnx_mha2_xkv records 25 skipped 0 maxrss_kib 4299572
+RUN round=1 pos=0 backend=onnx_mha2_xkv slice=25-50 2026-10-18T13:44:19Z load 2.59 1.99 1.39
+DONE onnx_mha2_xkv records 25 skipped 25 maxrss_kib 4334452
+RUN round=1 pos=1 backend=onnx_mha2 slice=25-50 2026-10-18T13:46:46Z load 2.33 2.09 1.52
+DONE onnx_mha2 records 25 skipped 25 maxrss_kib 4359876
+RUN round=2 pos=0 backend=onnx_mha2 slice=50-75 2026-10-18T13:49:19Z load 2.32 2.16 1.64
+DONE onnx_mha2 records 25 skipped 50 maxrss_kib 4377472
+RUN round=2 pos=1 backend=onnx_mha2_xkv slice=50-75 2026-10-18T13:51:52Z load 2.43 2.28 1.77
+DONE onnx_mha2_xkv records 25 skipped 50 maxrss_kib 4354772
+RUN round=3 pos=0 backend=onnx_mha2_xkv slice=75-100 2026-10-18T13:54:18Z load 2.64 2.48 1.93
+DONE onnx_mha2_xkv records 25 skipped 75 maxrss_kib 4332060
+RUN round=3 pos=1 backend=onnx_mha2 slice=75-100 2026-10-18T13:56:45Z load 2.26 2.36 1.97
+DONE onnx_mha2 records 25 skipped 75 maxrss_kib 4355860
+END 2026-10-18T13:59:19Z

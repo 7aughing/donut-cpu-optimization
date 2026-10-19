@@ -1,0 +1,6 @@
+START finalize 2026-10-18T12:51:07Z load 1.17 0.70 0.55
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+FINALIZED {'encoder.onnx': (15999, 311965091), 'decoder.onnx': (877, 743776030), 'decoder_with_past.onnx': (245, 710123785)}
+MHA [('Attention_0', 'past_0_cross_k', ['batch', 16, 1200, 64]), ('Attention_1', 'past_1_cross_k', ['batch', 16, 1200, 64]), ('Attention_2', 'past_2_cross_k', ['batch', 16, 1200, 64]), ('Attention_3', 'past_3_cross_k', ['batch', 16, 1200, 64])]
+SINGLE_STEP {'image': 'cord_test_000.png', 'first_token': 57526, 'logits_max_abs_diff': 5.7220458984375e-05, 'next_token_raw': 57528, 'next_token_fused': 57528, 'present_self_max_abs_diff': 2.384185791015625e-06, 'fused_outputs': ['logits', 'present_0_cross_k', 'present_0_cross_v', 'present_0_self_k', 'present_0_self_v', 'present_1_cross_k', 'present_1_cross_v', 'present_1_self_k', 'present_1_self_v', 'present_2_cross_k', 'present_2_cross_v', 'present_2_self_k', 'present_2_self_v', 'present_3_cross_k', 'present_3_cross_v', 'present_3_self_k', 'present_3_self_v'], 'next_token_identical': True}
+EXIT finalize rc=0 killed=0 peak_anon=2467311616 2026-10-18T12:51:35Z
